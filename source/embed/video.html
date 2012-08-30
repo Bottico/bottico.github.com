@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bottico SublimeVideo</title>
+  <script type="text/javascript" src="http://cdn.sublimevideo.net/js/7t8rkdmp.js"></script>
+</head>
+<body>
+	<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript">
+	;(function(window){
+		var
+		 $_GET = window.$_GET = {},
+		 $_VAN = window.$_VAN = {},
+		 location = window.location,
+		 search = location.search,
+		 href = location.href, 
+
+		 index = search.indexOf('?') != -1 ? search.indexOf('?') + 1 : 0,
+		 get = search.substr(index).split('&'),
+		 vanity = href.replace(/^https?:\/\/(.*?)\//i, '').replace(/\?.*$/i, '').split('/'); 
+
+		 for (var i in get){
+		 var split = get[i].split('=');
+		 $_GET[split[0]] = split[1]||null;
+		 }
+		 for (var i in vanity)
+		 $_VAN[i] = vanity[i]||null;
+		})(window);
+
+		$(document).on('ready', function(){
+			alert($_GET['url']);
+			var url = $_GET['url'];
+			$("#video").append("<video class='sublime sv_iframe_embed' data-name='bottico' data-uid='c311b12d' style='display:none' preload='none'><source src='" + url + "' /></video>");
+		})
+	</script>
+	<div id="video">
+		
+	</div>
+</body>
+</html>
