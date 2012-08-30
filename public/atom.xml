@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Bottico]]></title>
-  <link href="http://botti.co/atom.xml" rel="self"/>
-  <link href="http://botti.co/"/>
-  <updated>2012-08-30T03:54:09-05:00</updated>
-  <id>http://botti.co/</id>
+  <link href="http://blog.botti.co/atom.xml" rel="self"/>
+  <link href="http://blog.botti.co/"/>
+  <updated>2012-08-30T14:44:58-05:00</updated>
+  <id>http://blog.botti.co/</id>
   <author>
     <name><![CDATA[Angel Celis Botto]]></name>
     
@@ -14,10 +14,107 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Perfomance, JavaScript blocks rendering]]></title>
+    <link href="http://blog.botti.co/!/perfomance/"/>
+    <updated>2012-08-30T13:41:00-05:00</updated>
+    <id>http://blog.botti.co/!/perfomance</id>
+    <content type="html"><![CDATA[<p>Hace ya tiempo en el primer meetup de <a href="http://www.bogodev.org/">Bogodev</a>, <a href="http://twitter.com/torrenegra">@torrenegra</a> hablo sobre tendencias en nueva york, y como la <strong>velocidad</strong> de carga de una pagina hablaba bien de ella.</p>
+
+<p>La idea de hoy es compartir una pequeña guia de como dar solucion a un problema frecuente a la hora de cargar archivos js :D</p>
+
+<h2>El problema</h2>
+
+<p><img class="center" src="http://dl.dropbox.com/u/27031193/botti.co/captura.png" title="perfomance" ></p>
+
+<p>Usualmente se acostumbra a cargar los archivos JavaScript <code>&lt;script&gt;</code> en las cabezeras del documento, <code>&lt;head&gt;</code>esto en cierto sentido no es malo, más sin embargo puede causar un problema a la hora de renderizar nuestra plantilla.</p>
+
+<figure class='code'><figcaption><span>Ficheros js cargados desde head</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="cp">&lt;!DOCTYPE HTML&gt;</span>
+</span><span class='line'><span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">&quot;en-US&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'><span class="nt">&lt;head&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;UTF-8&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;title&gt;&lt;/title&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;....&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;....&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;....&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;....&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'><span class="nt">&lt;/head&gt;</span>
+</span><span class='line'><span class="nt">&lt;body&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;/body&gt;</span>
+</span><span class='line'><span class="nt">&lt;/html&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Solucion</h2>
+
+<p>Los JavaScript <code>&lt;script&gt;</code> que se encuentran en la parte superior de nuestro documento HTML, deberiamos moderlo a la parte inferior de este justo arriba del <code>&lt;/body&gt;</code>para que los script
+sean cargado de ultimos y nuestra plantilla sea renderizado en un mejor tiempo.</p>
+
+<figure class='code'><figcaption><span>ficheros js cargados al final del documento</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="cp">&lt;!DOCTYPE HTML&gt;</span>
+</span><span class='line'><span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">&quot;en-US&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'><span class="nt">&lt;head&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;UTF-8&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;title&gt;&lt;/title&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;/head&gt;</span>
+</span><span class='line'><span class="nt">&lt;body&gt;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;....&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;....&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;....&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;....&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'><span class="nt">&lt;/body&gt;</span>
+</span><span class='line'><span class="nt">&lt;/html&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Otra solucion podria ser el uso de una secunencia de comandos de carga asynchronous, mediante un gestor de scripts como <a href="http://stevesouders.com/controljs/">ControlJS</a>.</p>
+
+<h2>Recursos</h2>
+
+<ul>
+<li><a href="http://google.com/?s=chrome">Chrome DeveloperToolts</a> Sin duda alguna una herramienta indispensable para mi.</li>
+<li><a href="http://www.webpagetest.org/">WebPageTests</a> Genera un reporte de desempeño, con una gran variedad de cosas para jugar</li>
+<li><a href="https://developers.google.com/speed/pagespeed/">Google Page Speed</a> Y Google consintiendonos con una muy buena herramienta, que nos da un reporte y consejos para arreglar los fallos :)</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[CSS para Placeholder]]></title>
-    <link href="http://botti.co/blog/css-para-placeholder/"/>
+    <link href="http://blog.botti.co/!/css-para-placeholder/"/>
     <updated>2012-08-30T01:55:00-05:00</updated>
-    <id>http://botti.co/blog/css-para-placeholder</id>
+    <id>http://blog.botti.co/!/css-para-placeholder</id>
     <content type="html"><![CDATA[<p>Elaborando un campo de búsqueda me tope con un problemita, el cual era definirle estilos a <strong>placeholder</strong>, y la solución para esto es bastante simple. basta simplemente con:</p>
 
 <figure class='code'><figcaption><span>Estilos para placeholder</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -85,9 +182,9 @@
   
   <entry>
     <title type="html"><![CDATA[Hola mundo]]></title>
-    <link href="http://botti.co/blog/HolaMundo/"/>
+    <link href="http://blog.botti.co/!/HolaMundo/"/>
     <updated>2012-08-27T17:16:00-05:00</updated>
-    <id>http://botti.co/blog/HolaMundo</id>
+    <id>http://blog.botti.co/!/HolaMundo</id>
     <content type="html"><![CDATA[<p>Hace varios años ya, cree mi primer Blog llamado <strong>El blog de legna</strong> Un blog personal, que practicamente era un copy paste de otros blogs, desarrollado en <strong>cute news</strong> y a punta de tablas xD, que por motivos personales no pude continuar.</p>
 
 <figure class='code'><figcaption><span>El que entendio entendio</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>

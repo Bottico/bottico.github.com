@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "CSS para Placeholder"
+keywords: CSS3 placeholder css estilos bottico
 date: 2012-08-30 01:55
 comments: true
 categories: css sass

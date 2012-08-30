@@ -23,6 +23,7 @@
   {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
+  <meta name="google-site-verification" content="aWsVi9MPQPfLZUKYOLIdnlVX9kMAnow13p6KpgktOqs" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% if site.cachedev %}<meta http-equiv="cache-control" content="no-cache">{% endif %}
   {% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' }}{% endif %}{% endcapture %}
@@ -30,5 +31,6 @@
   <link href="{{ root_url }}/favicon.ico" rel="icon">
   <link href="{{ root_url }}/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
+  
   {% include custom/head.html %}
 </head>

@@ -2,6 +2,7 @@
 layout: post
 title: "Hola mundo"
 date: 2012-08-27 17:16
+keywords: holamundo hola mundo bottico blog
 comments: true
 categories: personal
 ---

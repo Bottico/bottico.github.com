@@ -17,42 +17,18 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Sobre mi - Bottico</title>
+  <title>CSS para Placeholder - Bottico</title>
   <meta name="author" content="Angel Celis Botto">
   
-  <meta name="description" content="Sobre Mi Sobre mi1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-{ &quot;nombre&quot;: &quot;Angel Celis Botto&quot;, &quot;edad&quot &hellip;">
-  
+  <meta name="description" content="Elaborando un campo de búsqueda me tope con un problemita, el cual era definirle estilos a placeholder, y la solución para esto es bastante simple. &hellip;">
+  <meta name="keywords" content="CSS3 placeholder css estilos bottico">
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta name="google-site-verification" content="aWsVi9MPQPfLZUKYOLIdnlVX9kMAnow13p6KpgktOqs" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="cache-control" content="no-cache">
   
-  <link rel="canonical" href="http://blog.botti.co/about/">
+  <link rel="canonical" href="http://blog.botti.co/!/css-para-placeholder/">
   <link href="/favicon.ico" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Bottico" type="application/atom+xml">
@@ -97,14 +73,63 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Sobre Mi</h1>
+    
+      <h1 class="entry-title">CSS Para Placeholder</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-30T01:55:00-05:00" pubdate data-updated="true">Aug 30<span>th</span>, 2012</time>
+        
+      </p>
     
   </header>
-  
-  <figure class='code'><figcaption><span>Sobre mi</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+
+
+<div class="entry-content"><p>Elaborando un campo de búsqueda me tope con un problemita, el cual era definirle estilos a <strong>placeholder</strong>, y la solución para esto es bastante simple. basta simplemente con:</p>
+
+<figure class='code'><figcaption><span>Estilos para placeholder</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nd">:-moz-placeholder</span> <span class="p">{</span>
+</span><span class='line'>   <span class="o">//</span> <span class="n">juega</span> <span class="n">con</span> <span class="n">css</span> <span class="o">:</span><span class="n">D</span>
+</span><span class='line'>   <span class="k">color</span><span class="o">:</span><span class="m">#9bead8</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">:</span><span class="nd">:-webkit-input-placeholder</span> <span class="p">{</span>
+</span><span class='line'>   <span class="o">//</span> <span class="n">juega</span> <span class="n">con</span> <span class="n">css</span> <span class="o">:</span><span class="n">D</span>
+</span><span class='line'>   <span class="k">color</span><span class="o">:</span><span class="m">#9bead8</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<h3>Jugando un poco con sass</h3>
+
+<p>Para darle una solución mas <strong>útil</strong> cree un mixin en mi proyecto el cual quedo de la siguiente manera:</p>
+
+<figure class='code'><figcaption><span>PlaceholderMixin </span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -115,57 +140,65 @@
 <span class='line-number'>9</span>
 <span class='line-number'>10</span>
 <span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-</pre></td><td class='code'><pre><code class='json'><span class='line'><span class="p">{</span>
-</span><span class='line'>  <span class="nt">&quot;nombre&quot;</span><span class="p">:</span> <span class="s2">&quot;Angel Celis Botto&quot;</span><span class="p">,</span>
-</span><span class='line'>  <span class="nt">&quot;edad&quot;</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span>
-</span><span class='line'>  <span class="nt">&quot;descrip&quot;</span><span class="p">:</span> <span class="s2">&quot;Que tal! soy un desarrollador de esos apasionados, </span>
-</span><span class='line'><span class="s2">           que se emocionan escribiendo un hola mudo en nuevos </span>
-</span><span class='line'><span class="s2">           lenguajes, y de esos que toma cafe, comiendo </span>
-</span><span class='line'><span class="s2">           pizza resolviendo problemas.</span>
+</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="k">@mixin</span><span class="nf"> placeholder</span><span class="p">(</span><span class="nv">$color</span><span class="p">)</span><span class="err">{</span>
+</span><span class='line'>  <span class="o">*</span><span class="err">{</span>
+</span><span class='line'>    <span class="na">&amp;</span><span class="o">::-</span><span class="n">webkit-input-placeholder</span> <span class="err">{</span>
+</span><span class='line'>      <span class="na">color</span><span class="o">:</span><span class="nv">$color</span><span class="err">;</span>
+</span><span class='line'>    <span class="err">}</span>
 </span><span class='line'>
-</span><span class='line'><span class="s2">           Disfruto buscando formas originales y creativas para </span>
-</span><span class='line'><span class="s2">           cambiar el mundo. amante del diseño, la fotografía </span>
-</span><span class='line'><span class="s2">           y la programación.&quot;</span><span class="p">,</span>
-</span><span class='line'>  <span class="nt">&quot;love&quot;</span><span class="p">:</span> <span class="p">{</span>
-</span><span class='line'>      <span class="nt">&quot;ruby&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-</span><span class='line'>      <span class="nt">&quot;html&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-</span><span class='line'>      <span class="nt">&quot;css&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-</span><span class='line'>      <span class="nt">&quot;JavaScript&quot;</span><span class="p">:</span> <span class="kc">true</span>
-</span><span class='line'>  <span class="p">},</span>
-</span><span class='line'>  <span class="nt">&quot;socialMedia&quot;</span><span class="p">:{</span>
-</span><span class='line'>      <span class="nt">&quot;github&quot;</span><span class="p">:</span> <span class="s2">&quot;angelbotto&quot;</span><span class="p">,</span>
-</span><span class='line'>      <span class="nt">&quot;twitter&quot;</span><span class="p">:</span> <span class="s2">&quot;bottico&quot;</span><span class="p">,</span>
-</span><span class='line'>      <span class="nt">&quot;facebook&quot;</span><span class="p">:</span> <span class="s2">&quot;angelbotto&quot;</span><span class="p">,</span>
-</span><span class='line'>      <span class="nt">&quot;googleplus&quot;</span><span class="p">:</span> <span class="mi">100537306662051964513</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'><span class="p">}</span>
+</span><span class='line'>    <span class="na">&amp;</span><span class="o">::-</span><span class="n">moz-placeholder</span> <span class="err">{</span>
+</span><span class='line'>      <span class="na">color</span><span class="o">:</span><span class="nv">$color</span><span class="err">;</span>
+</span><span class='line'>    <span class="err">}</span>
+</span><span class='line'>  <span class="err">}</span>
+</span><span class='line'><span class="err">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Ok, ok, mi nombre es <strong>Angel Celis Botto</strong>, tengo 22 años de edad, soy de la hermosa ciudad de <strong>Santa marta</strong>, <strong>Colombia</strong>, vivo actualmente en la ciudad de Bogota. <strong>CEO</strong> en <strong>Kreattiewe</strong> y <strong>Hyroki</strong>, desarrollo en el hermoso lenguaje <strong>Ruby</strong>, amante del desarrollo, <strong>Rails, sinatra, jekyll, html5, haml, css3, sass, compass, javascript, jquery, mootools, java, android..</strong> soy de esos programadores apasionado que le encanta sacar un &#8220;Hola Mundo&#8221; en nuevos lenguajes.</p>
 
-<p><em>Para contactarme parsea el json u.u</em></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="k">@include</span><span class="nd"> placeholder</span><span class="p">(</span><span class="mh">#ff0066</span><span class="p">)</span><span class="err">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Espero les sea de utilidad, es un problema sencillo y corto :)</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Escrito por <span class="fn">Angel Celis Botto</span></span>
+
+      
+
+
+
+
+
+
+
 
   
-    <footer>
+
+
+<time datetime="2012-08-30T01:55:00-05:00" pubdate data-updated="true">Aug 30<span>th</span>, 2012</time>
       
-      
-        <div class="sharing">
+
+<span class="categories">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://blog.botti.co/about/index.html" data-via="bottico" data-counturl="http://blog.botti.co/about/index.html" >Tweet</a>
+    <a class='category' href='//css/'>css</a>, <a class='category' href='//sass/'>sass</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://blog.botti.co/!/css-para-placeholder/" data-via="bottico" data-counturl="http://blog.botti.co/!/css-para-placeholder/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -175,13 +208,20 @@
   
 </div>
 
+    
+    <p class="meta">
       
-    </footer>
-  
+        <a class="basic-alignment left" href="/!/HolaMundo/" title="Previous Post: Hola mundo">&laquo; Hola mundo</a>
+      
+      
+        <a class="basic-alignment right" href="/!/perfomance/" title="Next Post: Perfomance, JavaScript blocks rendering">Perfomance, JavaScript blocks rendering &raquo;</a>
+      
+    </p>
+  </footer>
 </article>
 
   <section>
-    <h1>Comments</h1>
+    <h1>Comentarios</h1>
     <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
   </section>
@@ -253,8 +293,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://blog.botti.co/about/index.html';
-        var disqus_url = 'http://blog.botti.co/about/index.html';
+        var disqus_identifier = 'http://blog.botti.co/!/css-para-placeholder/';
+        var disqus_url = 'http://blog.botti.co/!/css-para-placeholder/';
         var disqus_script = 'embed.js';
       
     (function () {

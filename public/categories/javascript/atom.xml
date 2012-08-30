@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: javascript | Bottico]]></title>
+  <link href="http://blog.botti.co/categories/javascript/atom.xml" rel="self"/>
+  <link href="http://blog.botti.co/"/>
+  <updated>2012-08-30T14:44:58-05:00</updated>
+  <id>http://blog.botti.co/</id>
+  <author>
+    <name><![CDATA[Angel Celis Botto]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Perfomance, JavaScript blocks rendering]]></title>
+    <link href="http://blog.botti.co/!/perfomance/"/>
+    <updated>2012-08-30T13:41:00-05:00</updated>
+    <id>http://blog.botti.co/!/perfomance</id>
+    <content type="html"><![CDATA[<p>Hace ya tiempo en el primer meetup de <a href="http://www.bogodev.org/">Bogodev</a>, <a href="http://twitter.com/torrenegra">@torrenegra</a> hablo sobre tendencias en nueva york, y como la <strong>velocidad</strong> de carga de una pagina hablaba bien de ella.</p>
+
+<p>La idea de hoy es compartir una pequeña guia de como dar solucion a un problema frecuente a la hora de cargar archivos js :D</p>
+
+<h2>El problema</h2>
+
+<p><img class="center" src="http://dl.dropbox.com/u/27031193/botti.co/captura.png" title="perfomance" ></p>
+
+<p>Usualmente se acostumbra a cargar los archivos JavaScript <code>&lt;script&gt;</code> en las cabezeras del documento, <code>&lt;head&gt;</code>esto en cierto sentido no es malo, más sin embargo puede causar un problema a la hora de renderizar nuestra plantilla.</p>
+
+<p>```html Ficheros js cargados desde head
+&lt;!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script type="text/javascript" src="...."></script>
+  <script type="text/javascript" src="...."></script>
+  <script type="text/javascript" src="...."></script>
+  <script type="text/javascript" src="...."></script>
+</head>
+<body></p>
+
+<p></body>
+</html>
+```</p>
+
+<h2>Solucion</h2>
+
+<p>Los JavaScript <code>&lt;script&gt;</code> que se encuentran en la parte superior de nuestro documento HTML, deberiamos moderlo a la parte inferior de este justo arriba del <code>&lt;/body&gt;</code>para que los script
+sean cargado de ultimos y nuestra plantilla sea renderizado en un mejor tiempo.</p>
+
+<p>```html ficheros js cargados al final del documento
+&lt;!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title></title></p>
+
+<p></head>
+<body></p>
+
+<p>  <script type="text/javascript" src="...."></script>
+  <script type="text/javascript" src="...."></script>
+  <script type="text/javascript" src="...."></script>
+  <script type="text/javascript" src="...."></script>
+</body>
+</html>
+```</p>
+
+<p>Otra solucion podria ser el uso de una secunencia de comandos de carga asynchronous, mediante un gestor de scripts como <a href="http://stevesouders.com/controljs/">ControlJS</a>.</p>
+
+<h2>Recursos</h2>
+
+<ul>
+<li><a href="http://google.com/?s=chrome">Chrome DeveloperToolts</a> Sin duda alguna una herramienta indispensable para mi.</li>
+<li><a href="http://www.webpagetest.org/">WebPageTests</a> Genera un reporte de desempeño, con una gran variedad de cosas para jugar</li>
+<li><a href="https://developers.google.com/speed/pagespeed/">Google Page Speed</a> Y Google consintiendonos con una muy buena herramienta, que nos da un reporte y consejos para arreglar los fallos :)</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

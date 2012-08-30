@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: css | Bottico]]></title>
+  <link href="http://blog.botti.co/categories/css/atom.xml" rel="self"/>
+  <link href="http://blog.botti.co/"/>
+  <updated>2012-08-30T14:44:58-05:00</updated>
+  <id>http://blog.botti.co/</id>
+  <author>
+    <name><![CDATA[Angel Celis Botto]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[CSS para Placeholder]]></title>
+    <link href="http://blog.botti.co/!/css-para-placeholder/"/>
+    <updated>2012-08-30T01:55:00-05:00</updated>
+    <id>http://blog.botti.co/!/css-para-placeholder</id>
+    <content type="html"><![CDATA[<p>Elaborando un campo de búsqueda me tope con un problemita, el cual era definirle estilos a <strong>placeholder</strong>, y la solución para esto es bastante simple. basta simplemente con:</p>
+
+<p>``` css Estilos para placeholder</p>
+
+<p>:-moz-placeholder {<br/>
+   // juega con css :D
+   color:#9bead8;
+}</p>
+
+<p>::-webkit-input-placeholder {
+   // juega con css :D
+   color:#9bead8;
+}
+```</p>
+
+<h3>Jugando un poco con sass</h3>
+
+<p>Para darle una solución mas <strong>útil</strong> cree un mixin en mi proyecto el cual quedo de la siguiente manera:</p>
+
+<p>```sass PlaceholderMixin</p>
+
+<p>@mixin placeholder($color){
+  *{</p>
+
+<pre><code>&amp;::-webkit-input-placeholder {
+  color:$color;
+}
+
+&amp;::-moz-placeholder {
+  color:$color;
+}
+</code></pre>
+
+<p>  }
+}
+```</p>
+
+<p>```sass</p>
+
+<pre><code>@include placeholder(#ff0066);
+</code></pre>
+
+<p>```</p>
+
+<p>Espero les sea de utilidad, es un problema sencillo y corto :)</p>
+]]></content>
+  </entry>
+  
+</feed>

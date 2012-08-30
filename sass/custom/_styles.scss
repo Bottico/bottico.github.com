@@ -84,3 +84,12 @@ body {
 .toggle-sidebar::after {
         background:#fff $noise-bg;
     }
+
+.basic-alignment {
+    padding: 5px 30px;
+    background: #e5f0f7;
+    border-radius: 5px;
+    margin: 10px 0px;
+    color:darken(#e5f0f7,20%);
+    text-shadow:0 1px 0px rgba(255,255,255,0.8);
+}

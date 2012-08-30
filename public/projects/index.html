@@ -24,13 +24,15 @@
   
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
+  <meta name="google-site-verification" content="aWsVi9MPQPfLZUKYOLIdnlVX9kMAnow13p6KpgktOqs" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="cache-control" content="no-cache">
   
-  <link rel="canonical" href="http://botti.co/projects/">
+  <link rel="canonical" href="http://blog.botti.co/projects/">
   <link href="/favicon.ico" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Bottico" type="application/atom+xml">
+  
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -53,7 +55,7 @@
   
 <form action="http://google.com/search" method="get">
   <fieldset role="search">
-    <input type="hidden" name="q" value="site:botti.co" />
+    <input type="hidden" name="q" value="site:blog.botti.co" />
     <input class="search" type="text" name="q" results="0" placeholder="Buscar"/>
   </fieldset>
 </form>
@@ -86,7 +88,7 @@
       
         <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://botti.co/projects/index.html" data-via="bottico" data-counturl="http://botti.co/projects/index.html" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://blog.botti.co/projects/index.html" data-via="bottico" data-counturl="http://blog.botti.co/projects/index.html" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -123,8 +125,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://botti.co/projects/index.html';
-        var disqus_url = 'http://botti.co/projects/index.html';
+        var disqus_identifier = 'http://blog.botti.co/projects/index.html';
+        var disqus_url = 'http://blog.botti.co/projects/index.html';
         var disqus_script = 'embed.js';
       
     (function () {
@@ -170,10 +172,17 @@
 
 
 
+  
+
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="/javascripts/ender.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
-
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("bottico", 5, true);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
   
   <script type="text/javascript">
     var _gaq = _gaq || [];
