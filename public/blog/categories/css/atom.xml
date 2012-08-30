@@ -4,7 +4,7 @@
   <title><![CDATA[Category: css | Bottico]]></title>
   <link href="http://botti.co/blog/categories/css/atom.xml" rel="self"/>
   <link href="http://botti.co/"/>
-  <updated>2012-08-30T03:35:21-05:00</updated>
+  <updated>2012-08-30T03:54:09-05:00</updated>
   <id>http://botti.co/</id>
   <author>
     <name><![CDATA[Angel Celis Botto]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[CSS para Placeholder]]></title>
-    <link href="http://botti.co/css-para-placeholder/"/>
+    <link href="http://botti.co/blog/css-para-placeholder/"/>
     <updated>2012-08-30T01:55:00-05:00</updated>
-    <id>http://botti.co/css-para-placeholder</id>
+    <id>http://botti.co/blog/css-para-placeholder</id>
     <content type="html"><![CDATA[<p>Elaborando un campo de búsqueda me tope con un problemita, el cual era definirle estilos a <strong>placeholder</strong>, y la solución para esto es bastante simple. basta simplemente con:</p>
 
 <p>``` css Estilos para placeholder</p>

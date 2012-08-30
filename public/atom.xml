@@ -4,7 +4,7 @@
   <title><![CDATA[Bottico]]></title>
   <link href="http://botti.co/atom.xml" rel="self"/>
   <link href="http://botti.co/"/>
-  <updated>2012-08-30T03:35:21-05:00</updated>
+  <updated>2012-08-30T03:54:09-05:00</updated>
   <id>http://botti.co/</id>
   <author>
     <name><![CDATA[Angel Celis Botto]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[CSS para Placeholder]]></title>
-    <link href="http://botti.co/css-para-placeholder/"/>
+    <link href="http://botti.co/blog/css-para-placeholder/"/>
     <updated>2012-08-30T01:55:00-05:00</updated>
-    <id>http://botti.co/css-para-placeholder</id>
+    <id>http://botti.co/blog/css-para-placeholder</id>
     <content type="html"><![CDATA[<p>Elaborando un campo de búsqueda me tope con un problemita, el cual era definirle estilos a <strong>placeholder</strong>, y la solución para esto es bastante simple. basta simplemente con:</p>
 
 <figure class='code'><figcaption><span>Estilos para placeholder</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -85,9 +85,9 @@
   
   <entry>
     <title type="html"><![CDATA[Hola mundo]]></title>
-    <link href="http://botti.co/HolaMundo/"/>
+    <link href="http://botti.co/blog/HolaMundo/"/>
     <updated>2012-08-27T17:16:00-05:00</updated>
-    <id>http://botti.co/HolaMundo</id>
+    <id>http://botti.co/blog/HolaMundo</id>
     <content type="html"><![CDATA[<p>Hace varios años ya, cree mi primer Blog llamado <strong>El blog de legna</strong> Un blog personal, que practicamente era un copy paste de otros blogs, desarrollado en <strong>cute news</strong> y a punta de tablas xD, que por motivos personales no pude continuar.</p>
 
 <figure class='code'><figcaption><span>El que entendio entendio</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>

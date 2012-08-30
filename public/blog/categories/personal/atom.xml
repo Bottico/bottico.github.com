@@ -4,7 +4,7 @@
   <title><![CDATA[Category: personal | Bottico]]></title>
   <link href="http://botti.co/blog/categories/personal/atom.xml" rel="self"/>
   <link href="http://botti.co/"/>
-  <updated>2012-08-30T03:35:21-05:00</updated>
+  <updated>2012-08-30T03:54:09-05:00</updated>
   <id>http://botti.co/</id>
   <author>
     <name><![CDATA[Angel Celis Botto]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Hola mundo]]></title>
-    <link href="http://botti.co/HolaMundo/"/>
+    <link href="http://botti.co/blog/HolaMundo/"/>
     <updated>2012-08-27T17:16:00-05:00</updated>
-    <id>http://botti.co/HolaMundo</id>
+    <id>http://botti.co/blog/HolaMundo</id>
     <content type="html"><![CDATA[<p>Hace varios años ya, cree mi primer Blog llamado <strong>El blog de legna</strong> Un blog personal, que practicamente era un copy paste de otros blogs, desarrollado en <strong>cute news</strong> y a punta de tablas xD, que por motivos personales no pude continuar.</p>
 
 <p><code>ruby El que entendio entendio
