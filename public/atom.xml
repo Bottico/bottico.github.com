@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Bottico]]></title>
+  <link href="http://botti.co/atom.xml" rel="self"/>
+  <link href="http://botti.co/"/>
+  <updated>2012-08-30T03:47:18-05:00</updated>
+  <id>http://botti.co/</id>
+  <author>
+    <name><![CDATA[Angel Celis Botto]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[CSS para Placeholder]]></title>
+    <link href="http://botti.co/css-para-placeholder/"/>
+    <updated>2012-08-30T01:55:00-05:00</updated>
+    <id>http://botti.co/css-para-placeholder</id>
+    <content type="html"><![CDATA[<p>Elaborando un campo de búsqueda me tope con un problemita, el cual era definirle estilos a <strong>placeholder</strong>, y la solución para esto es bastante simple. basta simplemente con:</p>
+
+<figure class='code'><figcaption><span>Estilos para placeholder</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nd">:-moz-placeholder</span> <span class="p">{</span>
+</span><span class='line'>   <span class="o">//</span> <span class="n">juega</span> <span class="n">con</span> <span class="n">css</span> <span class="o">:</span><span class="n">D</span>
+</span><span class='line'>   <span class="k">color</span><span class="o">:</span><span class="m">#9bead8</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">:</span><span class="nd">:-webkit-input-placeholder</span> <span class="p">{</span>
+</span><span class='line'>   <span class="o">//</span> <span class="n">juega</span> <span class="n">con</span> <span class="n">css</span> <span class="o">:</span><span class="n">D</span>
+</span><span class='line'>   <span class="k">color</span><span class="o">:</span><span class="m">#9bead8</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<h3>Jugando un poco con sass</h3>
+
+<p>Para darle una solución mas <strong>útil</strong> cree un mixin en mi proyecto el cual quedo de la siguiente manera:</p>
+
+<figure class='code'><figcaption><span>PlaceholderMixin </span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="k">@mixin</span><span class="nf"> placeholder</span><span class="p">(</span><span class="nv">$color</span><span class="p">)</span><span class="err">{</span>
+</span><span class='line'>  <span class="o">*</span><span class="err">{</span>
+</span><span class='line'>    <span class="na">&amp;</span><span class="o">::-</span><span class="n">webkit-input-placeholder</span> <span class="err">{</span>
+</span><span class='line'>      <span class="na">color</span><span class="o">:</span><span class="nv">$color</span><span class="err">;</span>
+</span><span class='line'>    <span class="err">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="na">&amp;</span><span class="o">::-</span><span class="n">moz-placeholder</span> <span class="err">{</span>
+</span><span class='line'>      <span class="na">color</span><span class="o">:</span><span class="nv">$color</span><span class="err">;</span>
+</span><span class='line'>    <span class="err">}</span>
+</span><span class='line'>  <span class="err">}</span>
+</span><span class='line'><span class="err">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="k">@include</span><span class="nd"> placeholder</span><span class="p">(</span><span class="mh">#ff0066</span><span class="p">)</span><span class="err">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Espero les sea de utilidad, es un problema sencillo y corto :)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hola mundo]]></title>
+    <link href="http://botti.co/HolaMundo/"/>
+    <updated>2012-08-27T17:16:00-05:00</updated>
+    <id>http://botti.co/HolaMundo</id>
+    <content type="html"><![CDATA[<p>Hace varios años ya, cree mi primer Blog llamado <strong>El blog de legna</strong> Un blog personal, que practicamente era un copy paste de otros blogs, desarrollado en <strong>cute news</strong> y a punta de tablas xD, que por motivos personales no pude continuar.</p>
+
+<figure class='code'><figcaption><span>El que entendio entendio</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'> <span class="nb">puts</span> <span class="vi">@dinero</span> <span class="o">*</span> <span class="mi">0</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Si bien he estado utilizando el internet para aprender y conocer mucho, yo realmente nunca tuve tiempo para esto.</p>
+
+<p>Cuando cree angelbotto.net decidí, escribir una especie de libroTutorial, para enseñar y aprender el lenguaje PHP que por motivos de tiempo tuve que suspender y cerrar.</p>
+
+<p>Realmente esta fue una experiencia muy interesante y enriquecedora, No pensé que me llegase a gustar tanto escribir. Me gusto también la fase de preparación previa, la investigación y la recopilación de la información que se necesitaba para el articulo. y pues ni de que hablar de conseguir uno que otro comentario, donde te das cuenta que un blog no es para enseñar sino para aprender.</p>
+
+<p>A principios de este año, junto con <a href="http://twitter.com/jhonecg">@jhonecg</a> charlábamos sobre proyectos que nos gustaría desarrollar, uno de los puntos en la lista era crear un blog personal, crearlo y mantenerlo por un buuuen tiempo.</p>
+
+<p>Así que, aquí estoy a finales de agosto, inaugurando mi nuevo Blog <a href="http://botti.co">http://botti.co</a>, Donde escribiré y compartiré toda clase de cosas relacionados con el mundo del desarrollo web, móvil y general :).</p>
+
+<p>No faltando nada mas, bienvenidos a mi blog, espero que lo disfruten.</p>
+]]></content>
+  </entry>
+  
+</feed>
