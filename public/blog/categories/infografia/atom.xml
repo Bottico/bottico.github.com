@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: infografia | Bottico]]></title>
+  <link href="http://botti.co/blog/categories/infografia/atom.xml" rel="self"/>
+  <link href="http://botti.co/"/>
+  <updated>2012-09-03T11:11:42-05:00</updated>
+  <id>http://botti.co/</id>
+  <author>
+    <name><![CDATA[Angel Celis Botto]]></name>
+    <email><![CDATA[angelbotto@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Los proyectos con mas forks en github]]></title>
+    <link href="http://botti.co/blog/los-proyectos-con-mas-forks-en-github/"/>
+    <updated>2012-09-03T11:02:00-05:00</updated>
+    <id>http://botti.co/blog/los-proyectos-con-mas-forks-en-github</id>
+    <content type="html"><![CDATA[<p><img class="center" src="http://farm9.staticflickr.com/8315/7918858724_b6479aa961_o.jpg" title="most forked github" >
+<img class="center" src="http://farm9.staticflickr.com/8444/7918881746_f0fb9067e7_o.jpg" title="most forked github" >
+<img class="center" src="http://farm9.staticflickr.com/8297/7918882024_25c5cb2789_o.jpg" title="most forked github" >
+<img class="center" src="http://farm9.staticflickr.com/8297/7918882308_370edae9e4_o.jpg" title="most forked github" ></p>
+
+<p><strong>fuente:</strong></p>
+
+<ul>
+<li><a href="http://www.cyberhades.com/2012/09/03/los-proyectos-mas-duplicados-github-infografia/">CyberHader</a></li>
+<li><a href="https://github.com/popular/forked">Github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

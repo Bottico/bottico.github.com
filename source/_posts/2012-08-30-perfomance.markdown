@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Perfomance, JavaScript blocks rendering"
+title: "JavaScript blocks rendering"
 date: 2012-08-30 13:41
 keywords: javascript perfomance bottico rendimiento tiempo carga
 comments: true

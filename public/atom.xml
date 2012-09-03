@@ -2,22 +2,42 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Bottico]]></title>
-  <link href="http://blog.botti.co/atom.xml" rel="self"/>
-  <link href="http://blog.botti.co/"/>
-  <updated>2012-08-30T14:44:58-05:00</updated>
-  <id>http://blog.botti.co/</id>
+  <link href="http://botti.co/atom.xml" rel="self"/>
+  <link href="http://botti.co/"/>
+  <updated>2012-09-03T11:11:42-05:00</updated>
+  <id>http://botti.co/</id>
   <author>
     <name><![CDATA[Angel Celis Botto]]></name>
-    
+    <email><![CDATA[angelbotto@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[Perfomance, JavaScript blocks rendering]]></title>
-    <link href="http://blog.botti.co/!/perfomance/"/>
+    <title type="html"><![CDATA[Los proyectos con mas forks en github]]></title>
+    <link href="http://botti.co/blog/los-proyectos-con-mas-forks-en-github/"/>
+    <updated>2012-09-03T11:02:00-05:00</updated>
+    <id>http://botti.co/blog/los-proyectos-con-mas-forks-en-github</id>
+    <content type="html"><![CDATA[<p><img class="center" src="http://farm9.staticflickr.com/8315/7918858724_b6479aa961_o.jpg" title="most forked github" >
+<img class="center" src="http://farm9.staticflickr.com/8444/7918881746_f0fb9067e7_o.jpg" title="most forked github" >
+<img class="center" src="http://farm9.staticflickr.com/8297/7918882024_25c5cb2789_o.jpg" title="most forked github" >
+<img class="center" src="http://farm9.staticflickr.com/8297/7918882308_370edae9e4_o.jpg" title="most forked github" ></p>
+
+<p><strong>fuente:</strong></p>
+
+<ul>
+<li><a href="http://www.cyberhades.com/2012/09/03/los-proyectos-mas-duplicados-github-infografia/">CyberHader</a></li>
+<li><a href="https://github.com/popular/forked">Github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript blocks rendering]]></title>
+    <link href="http://botti.co/blog/perfomance/"/>
     <updated>2012-08-30T13:41:00-05:00</updated>
-    <id>http://blog.botti.co/!/perfomance</id>
+    <id>http://botti.co/blog/perfomance</id>
     <content type="html"><![CDATA[<p>Hace ya tiempo en el primer meetup de <a href="http://www.bogodev.org/">Bogodev</a>, <a href="http://twitter.com/torrenegra">@torrenegra</a> hablo sobre tendencias en nueva york, y como la <strong>velocidad</strong> de carga de una pagina hablaba bien de ella.</p>
 
 <p>La idea de hoy es compartir una pequeña guia de como dar solucion a un problema frecuente a la hora de cargar archivos js :D</p>
@@ -112,9 +132,9 @@ sean cargado de ultimos y nuestra plantilla sea renderizado en un mejor tiempo.<
   
   <entry>
     <title type="html"><![CDATA[CSS para Placeholder]]></title>
-    <link href="http://blog.botti.co/!/css-para-placeholder/"/>
+    <link href="http://botti.co/blog/css-para-placeholder/"/>
     <updated>2012-08-30T01:55:00-05:00</updated>
-    <id>http://blog.botti.co/!/css-para-placeholder</id>
+    <id>http://botti.co/blog/css-para-placeholder</id>
     <content type="html"><![CDATA[<p>Elaborando un campo de búsqueda me tope con un problemita, el cual era definirle estilos a <strong>placeholder</strong>, y la solución para esto es bastante simple. basta simplemente con:</p>
 
 <figure class='code'><figcaption><span>Estilos para placeholder</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -182,9 +202,9 @@ sean cargado de ultimos y nuestra plantilla sea renderizado en un mejor tiempo.<
   
   <entry>
     <title type="html"><![CDATA[Hola mundo]]></title>
-    <link href="http://blog.botti.co/!/HolaMundo/"/>
+    <link href="http://botti.co/blog/HolaMundo/"/>
     <updated>2012-08-27T17:16:00-05:00</updated>
-    <id>http://blog.botti.co/!/HolaMundo</id>
+    <id>http://botti.co/blog/HolaMundo</id>
     <content type="html"><![CDATA[<p>Hace varios años ya, cree mi primer Blog llamado <strong>El blog de legna</strong> Un blog personal, que practicamente era un copy paste de otros blogs, desarrollado en <strong>cute news</strong> y a punta de tablas xD, que por motivos personales no pude continuar.</p>
 
 <figure class='code'><figcaption><span>El que entendio entendio</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>

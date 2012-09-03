@@ -2,7 +2,7 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://blog.botti.co
+url: http://botti.co
 title: Bottico
 subtitle: Una vida de desarrollando
 author: Angel Celis Botto
@@ -20,7 +20,7 @@ date_format: "ordinal"
 subscribe_rss: /atom.xml
 subscribe_email: 
 # RSS feeds can list your email address if you like
-email:
+email: angelbotto@gmail.com
 
 # ----------------------- #
 #    Jekyll & Plugins     #
@@ -29,12 +29,12 @@ email:
 # If publishing to a subdirectory as in http://site.com/project set 'root: /project'
 root: /
 #permalink: /blog/:year/:month/:day/:title/
-permalink: /!/:title/
+permalink: /blog/:title/
 source: source
 destination: public
 plugins: plugins
 code_dir: downloads/code
-category_dir: !/categories
+category_dir: blog/categories
 markdown: rdiscount
 pygments: false # default python pygments have been replaced by pygments.rb
 
@@ -95,7 +95,7 @@ delicious_count: 3
 
 # Disqus Comments
 disqus_short_name: blogbottico
-disqus_show_comment_count: false
+disqus_show_comment_count: true
 
 # Google Analytics
 google_analytics_tracking_id: "UA-30981360-1"
