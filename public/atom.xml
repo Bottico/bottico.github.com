@@ -4,7 +4,7 @@
   <title><![CDATA[Bottico]]></title>
   <link href="http://botti.co/atom.xml" rel="self"/>
   <link href="http://botti.co/"/>
-  <updated>2012-10-08T03:14:03-05:00</updated>
+  <updated>2012-10-08T03:46:40-05:00</updated>
   <id>http://botti.co/</id>
   <author>
     <name><![CDATA[Angel Celis Botto]]></name>
@@ -12,6 +12,42 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Ganamos RHOK - HAC2012 - Hackers contra la corrupcion]]></title>
+    <link href="http://botti.co/blog/ganamos-rhok-hac2012-hackers-contra-la-corrupcion/"/>
+    <updated>2012-10-08T03:29:00-05:00</updated>
+    <id>http://botti.co/blog/ganamos-rhok-hac2012-hackers-contra-la-corrupcion</id>
+    <content type="html"><![CDATA[<p><img class="center" src="https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-prn1/150369_10151080902410642_532265302_n.jpg"></p>
+
+<p>Los días 6 y 7 de octubre del 2012 nos encontramos una gran cantidad de desarrolladores en <strong>Wayra Colombia</strong> para llevar acabo una <strong>hackaton</strong> para dar solución o implementar una nueva herramienta a 2 temas en especifico.</p>
+
+<p>Durante 24 horas seguidas :) desarrollamos (corruptyle participaco reportaco) nunca le pusimos un nombre xD. una herramienta la cual consiste en viralizar socializar compartir y reportar información publicitaria sobre un candidato X mediante una app móvil o directamente sobre la web, con una interfaz de usuario bastante agradable enfocada no en estadísticas sino en lo que realmente le interesa al usuario el reporte!. algo súper del proyecto fue la elaboración de un API para permitir a otros desarrolladores consumir nuestros datos para crear sus propias herramientas o generar de manera independiente nuevos proyectos.</p>
+
+<h3>Que usamos</h3>
+
+<p>Desarrollamos la aplicacion web y y el API con <strong>ruby,sinatra</strong> :)
+Interfaz de usuario <strong>HTML5(erb)</strong> <strong>CSS(sass)</strong>
+Desarrollo movil <strong>Cordova</strong></p>
+
+<h3>Codigo fuente.</h3>
+
+<ul>
+<li><a href="https://github.com/angelbotto/corruptly">https://github.com/angelbotto/corruptly</a></li>
+<li><a href="https://github.com/senorpasajero/corruptly">https://github.com/senorpasajero/corruptly</a></li>
+</ul>
+
+
+<h3>Notas</h3>
+
+<p>Fue una experiencia genial, no solo se construyo si no que también se aprendió demasiadas cosas y se hicieron muy buenas amistades. realmente una hackathon es algo que no pueden dejar de conocer :)</p>
+
+<h3>:O Aca el video cuando nos nombraron ganadores :3</h3>
+
+<iframe width="640" height="510" src="http://www.youtube.com/embed/m6T3F_Y3eIs " frameborder="0" allowfullscreen></iframe>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Lanzar Sublime Text 2 desde la terminal en Mac OS X]]></title>
