@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: sinatra | Bottico]]></title>
+  <link href="http://botti.co/blog/categories/sinatra/atom.xml" rel="self"/>
+  <link href="http://botti.co/"/>
+  <updated>2012-10-08T03:14:03-05:00</updated>
+  <id>http://botti.co/</id>
+  <author>
+    <name><![CDATA[Angel Celis Botto]]></name>
+    <email><![CDATA[angelbotto@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Parsear JSON en Sinatra]]></title>
+    <link href="http://botti.co/blog/parsear-json-con-sinatra/"/>
+    <updated>2012-10-08T01:51:00-05:00</updated>
+    <id>http://botti.co/blog/parsear-json-con-sinatra</id>
+    <content type="html"><![CDATA[<h3>El problema</h3>
+
+<p>Muchas veces consumimos datos de otras aplicaciones o otras herramientas ya sea para alimentar nuestro propio servicios o integrando nuestra App con alguna API.</p>
+
+<p>En este caso necesitamos obtener los datos de BContacts de todos y cada uno de los contactos.</p>
+
+<p><strong>URL Api todos los contactos</strong>
+<code>
+http://bcontacts.botti.co/api/allbcontacts/json
+</code></p>
+
+<p><strong>URL Api contacto individual</strong>
+<code>
+http://bcontacts.botti.co/api/contact/505830090f11d80002000001/json
+</code></p>
+
+<h3>La solucion</h3>
+
+<p>Si bien es cierto no es Sinatra quien parsea JSON, tenemos a la mano una gran cantidad de gemas que nos ayudan a este tipo de cosas.</p>
+
+<p>Yo quiero hablar un poco de <a href="http://johnnunemaker.com/httparty/">HTTParty</a> una gema que nos permite hacer peticiones GET, POST, etc de una manera facil y divertida como el creador de esta dice <strong>Makes http fun again!</strong></p>
+
+<p><strong>SinatraApp</strong>
+``` ruby SinatraApp.rb
+require 'sinatra'
+require 'HTTParty'</p>
+
+<h1>http://localhost:PUERTO/</h1>
+
+<p>get '/' do</p>
+
+<pre><code>@contactos = HTTParty.get("http://bcontacts.botti.co/api/allbcontacts/json")
+
+#Datos que obtenemos por respuesta, pueden ser util para derterminar otras cositas
+#fuera del codigo que queremos :)
+
+"
+&lt;strong&gt;Respuesta: &lt;/strong&gt;#{@contactos.code}&lt;br&gt; 
+&lt;strong&gt;Mensaje: &lt;/strong&gt;#{@contactos.message}&lt;br&gt; 
+&lt;strong&gt;Headers: &lt;/strong&gt;#{@contactos.headers.inspect}&lt;br&gt;&lt;br&gt;
+&lt;strong&gt;Body: &lt;/strong&gt;#{@contactos.body}&lt;br&gt; 
+"
+</code></pre>
+
+<p>end</p>
+
+<h1>http://localhost:PUERTO/all</h1>
+
+<p>get '/all' do</p>
+
+<pre><code>@contactos = HTTParty.get("http://bcontacts.botti.co/api/allbcontacts/json")
+
+#nos muestra la url guardada :)
+@contactos[0]["url"]
+</code></pre>
+
+<p>end</p>
+
+<h1>http://localhost:PUERTO/specific</h1>
+
+<p>get '/specific' do</p>
+
+<pre><code>@contacto = HTTParty.get("http://bcontacts.botti.co/api/contact/505830090f11d80002000001/json")
+
+#nos muestra la unica url guardada
+@contacto["url"]
+</code></pre>
+
+<p>end
+```</p>
+
+<h3>Conclusion</h3>
+
+<p>:) como ven es algo muy facil de realizar ya sea a un arreglo o a un objecto, espero les sirva, si tienen comentarios, sugerencias o preguntas adelante, que la idea es aprender :)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Redirección 301, Paginas sin WWW - Sinatra]]></title>
+    <link href="http://botti.co/blog/redireccion-301/"/>
+    <updated>2012-09-18T04:26:00-05:00</updated>
+    <id>http://botti.co/blog/redireccion-301</id>
+    <content type="html"><![CDATA[<p>Segun tengo entendido, tener accesso habilitado mediante www o sin ella, afecta el posicionamiento de esta en los buscadores (Mal SEO), ya que lo detecta como contenido duplicado.</p>
+
+<p>Cree un snippet que depronto les puede ser util, para redireccionar de midominio.com a www.midominio.com.</p>
+
+<p>```ruby sinatrapp.rb
+before do</p>
+
+<pre><code>    redirect request.url.sub(/www\./, ''), 301 if request.host =~ /^www/
+</code></pre>
+
+<p>end
+```</p>
+
+<h3>Conclución</h3>
+
+<p>No es relevante usar con o sin wwww lo importante, es definir una de estas para una buena optimizacion de nuestro sitio.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Jugando con Sinatra]]></title>
+    <link href="http://botti.co/blog/conociendo-sinatra/"/>
+    <updated>2012-09-17T16:33:00-05:00</updated>
+    <id>http://botti.co/blog/conociendo-sinatra</id>
+    <content type="html"><![CDATA[<h2>Sinatra</h2>
+
+<p><a href="http://sinatrarb.com">Sinatra</a> es un framework <strong>(DSL)</strong> de desarrollo para aplicaciones web escrito en <strong>Ruby</strong>. que usa <strong>Rack</strong> para envolver o resolver peticiones HTTP <strong>middleware</strong>.</p>
+
+<h3>La idea</h3>
+
+<p>Para poner en practica y entender un poco de Sinatra vamos a crear una mini aplicación encargada de almacenar contactos cuyo nombre sera <strong>bcontacts</strong>, los cuales podamos consultar a nivel general o de manera única.</p>
+
+<p>Que contara con API para consumir estos datos mediante json o xml.</p>
+
+<h3>Interfaz</h3>
+
+<p><img class="center" src="http://go4.es/0b15"></p>
+
+<p>la interfaz me base en algo muy sencillo, pero bonito a mi parecer :3 desarrollado con <strong>sass</strong> y <strong>css3</strong></p>
+
+<h3>Estrucutra</h3>
+
+<p>si bien es cierto sinatra no se guía bajo el patrón MVC pero de la prisa y el desorden no queda nada bueno. así que vamos a manejar cierto orden en nuestro proyecto.</p>
+
+<ul>
+<li><strong><a href="https://github.com/angelbotto/bcontacts/tree/master/Helpers">Helpers/</a></strong>
+
+<ul>
+<li><a href="https://github.com/angelbotto/bcontacts/blob/master/Helpers/bchelpers.rb">bchelpers.rb</a></li>
+</ul>
+</li>
+<li><strong><a href="https://github.com/angelbotto/bcontacts/tree/master/Models">Models/</a></strong>
+
+<ul>
+<li><a href="https://github.com/angelbotto/bcontacts/blob/master/Models/Contact.rb">Contact.rb</a></li>
+</ul>
+</li>
+<li><strong><a href="https://github.com/angelbotto/bcontacts/tree/master/public">public/</a></strong>
+
+<ul>
+<li><strong><a href="https://github.com/angelbotto/bcontacts/tree/master/public/imagen">imagen/</a></strong></li>
+<li><strong><a href="https://github.com/angelbotto/bcontacts/tree/master/public/javascript">javascript/</a></strong>
+
+<ul>
+<li><strong><a href="https://github.com/angelbotto/bcontacts/tree/master/public/javascript/libs">libs/</a></strong></li>
+<li><strong><a href="https://github.com/angelbotto/bcontacts/blob/master/public/javascript/script.js">scripts.js</a></strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong><a href="https://github.com/angelbotto/bcontacts/tree/master/views">Views/</a></strong>
+
+<ul>
+<li> <strong><a href="https://github.com/angelbotto/bcontacts/tree/master/views/css">css/</a></strong>
+
+<ul>
+<li><a href="https://github.com/angelbotto/bcontacts/blob/master/views/css/_features.scss">_featured.scss</a></li>
+<li><a href="https://github.com/angelbotto/bcontacts/blob/master/views/css/style.scss">style.scss</a></li>
+</ul>
+</li>
+<li> <strong><a href="https://github.com/angelbotto/bcontacts/tree/master/views/layouts">layouts/</a></strong>
+
+<ul>
+<li><a href="https://github.com/angelbotto/bcontacts/blob/master/views/layouts/index.erb">index.erb</a></li>
+<li><a href="https://github.com/angelbotto/bcontacts/blob/master/views/layouts/about.erb">about.erb</a></li>
+<li><a href="https://github.com/angelbotto/bcontacts/blob/master/views/layouts/api.erb">api.erb</a></li>
+<li><a href="https://github.com/angelbotto/bcontacts/blob/master/views/layouts/coments.erb">coments.erb</a></li>
+<li><a href="https://github.com/angelbotto/bcontacts/blob/master/views/layouts/contacto.erb">contacto.erb</a></li>
+<li><a href="https://github.com/angelbotto/bcontacts/blob/master/views/layouts/edit.erb">edit.erb</a></li>
+<li><a href="https://github.com/angelbotto/bcontacts/blob/master/views/layouts/menu.erb">menu.erb</a></li>
+<li><a href="https://github.com/angelbotto/bcontacts/blob/master/views/layouts/new.erb">new.erb</a></li>
+</ul>
+</li>
+<li> <a href="https://github.com/angelbotto/bcontacts/blob/master/views/layout.erb">layout.erb</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/angelbotto/bcontacts/blob/master/Api.rb">Api.rb</a></li>
+<li><a href="https://github.com/angelbotto/bcontacts/blob/master/BContacts.rb">BContacts.rb</a></li>
+<li><a href="https://github.com/angelbotto/bcontacts/blob/master/config.ru">config.ru</a></li>
+<li><a href="https://github.com/angelbotto/bcontacts/blob/master/Gemfile">Gemfile</a></li>
+<li><a href="https://github.com/angelbotto/bcontacts/blob/master/README.md">Readme.md</a></li>
+</ul>
+
+
+<h2>Explora, Comenta y Pregunta</h2>
+
+<p>El codigo fuente del proyecto esta alojado en <a href="https://github.com/angelbotto/bcontacts/">github/angelbotto/bcontacts</a>, y el demo esta alojado en <a href="http://bcontacts.botti.co">bcontacts.botti.co</a> la idea de compartir el codigo es que otros lo exploren pregunten, y comenten :).</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Balotimetro]]></title>
+    <link href="http://botti.co/blog/balotimetro/"/>
+    <updated>2012-09-17T16:04:00-05:00</updated>
+    <id>http://botti.co/blog/balotimetro</id>
+    <content type="html"><![CDATA[<p><img class="center" src="http://gallery.mailchimp.com/789b1037d0cbbb5eeabfecd29/images/header2.png">
+Estuve unos días alejado del blog, la razón se debe a que me propuse aprender algo nuevo y realizar un pequeño proyecto basado en este nuevo aprendizaje.</p>
+
+<h2>Balotimetro</h2>
+
+<p><a href="http://balotimetro.com">Balotimetro</a> es una aplicación web, cuya función es generar números para el <a href="http://baloto.com">baloto</a> pero de una manera diferente, la <em>magia</em> consiste en que la app genera 6 números basado en los números que han caído con mayor regularidad en todos los sorteos del baloto.</p>
+
+<h3>Desarrollo</h3>
+
+<p>Como les comente quise aprender algo nuevo y opte por <a href="http://sinatrarb.com">Sinatra</a>, un framework de desarrollo de aplicaciones web escrito en <strong>Ruby</strong>.</p>
+
+<p>La experiencia fue muy agradable puesto que a pesar que es un framework muy liviano es sumamente poderoso y escalable.</p>
+
+<p>En los siguientes artículos explicare como comenzar a trabajar con este framework y hacer un poco de deploy con <a href="http://heroku.com">heroku</a> :)</p>
+
+<p>Mientras escribo los artículos los invito a jugar con <a href="http://balotimetro.com">Balotimetro</a> a comentar y a dar sugerencias que siempre son bien recibidas :3</p>
+]]></content>
+  </entry>
+  
+</feed>

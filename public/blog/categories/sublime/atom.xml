@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: sublime | Bottico]]></title>
+  <link href="http://botti.co/blog/categories/sublime/atom.xml" rel="self"/>
+  <link href="http://botti.co/"/>
+  <updated>2012-10-08T03:14:03-05:00</updated>
+  <id>http://botti.co/</id>
+  <author>
+    <name><![CDATA[Angel Celis Botto]]></name>
+    <email><![CDATA[angelbotto@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Lanzar Sublime Text 2 desde la terminal en Mac OS X]]></title>
+    <link href="http://botti.co/blog/lanzar-sublime-text-2-desde-la-terminal-en-mac-os-x/"/>
+    <updated>2012-10-08T02:54:00-05:00</updated>
+    <id>http://botti.co/blog/lanzar-sublime-text-2-desde-la-terminal-en-mac-os-x</id>
+    <content type="html"><![CDATA[<p>Queria compartir un <strong>recurso</strong> bastante productivo para lanzar sublime text 2 desde nuestra terminal.</p>
+
+<h3>Instalacion</h3>
+
+<p>La idea consiste en crear un binario en la carpeta <code>/usr/local/bin</code> basado en el archivo binario de sublime text 2.</p>
+
+<p><code>
+ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/sublime
+</code></p>
+
+<p>Con esto creamos un enlace simbolico, llamado <code>sublime</code>. ( Ten en cuenta que este nombre, es el que usaremos para ejecutar sublime desde la terminal, puedes llamarlo como desees para ser mas productivo y rapido podria ser <code>s</code> algo por el estilo)</p>
+
+<h3>Probando</h3>
+
+<p>Ejecutamos la terminal y ejecutamos uno de estos comandos segun sea la necesidad.</p>
+
+<p><strong>Ejecutar Sublime</strong>
+<code>
+sublime
+</code>
+con este abrimos sublime text 2 unicamente.</p>
+
+<p><strong>Abrir archivo con sublime</strong>
+<code>
+sublime filename
+</code></p>
+
+<p>Con este comando abrimos sublime text 2 y el documento especificado.</p>
+
+<p><strong>Abrir carpeta</strong>
+<code>
+sublime foldername
+</code></p>
+
+<p>Con este comando abrimos sublime text 2 y la carpeta especificada con todos sus directorios y archivos.</p>
+
+<p><strong>Magia</strong></p>
+
+<p><code>
+sublime .
+</code></p>
+
+<p>Con este ejecutamos sublime abriendo la carpeta del directorio donde te encuentras ubicado en la terminal.</p>
+
+<p><img class="center" src="http://www.crearmeme.com/media/created/j7322k.jpg"></p>
+
+<p>espero les sea util :)</p>
+]]></content>
+  </entry>
+  
+</feed>

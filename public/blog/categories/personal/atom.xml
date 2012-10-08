@@ -4,7 +4,7 @@
   <title><![CDATA[Category: personal | Bottico]]></title>
   <link href="http://botti.co/blog/categories/personal/atom.xml" rel="self"/>
   <link href="http://botti.co/"/>
-  <updated>2012-09-03T11:11:42-05:00</updated>
+  <updated>2012-10-08T03:14:03-05:00</updated>
   <id>http://botti.co/</id>
   <author>
     <name><![CDATA[Angel Celis Botto]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Balotimetro]]></title>
+    <link href="http://botti.co/blog/balotimetro/"/>
+    <updated>2012-09-17T16:04:00-05:00</updated>
+    <id>http://botti.co/blog/balotimetro</id>
+    <content type="html"><![CDATA[<p><img class="center" src="http://gallery.mailchimp.com/789b1037d0cbbb5eeabfecd29/images/header2.png">
+Estuve unos días alejado del blog, la razón se debe a que me propuse aprender algo nuevo y realizar un pequeño proyecto basado en este nuevo aprendizaje.</p>
+
+<h2>Balotimetro</h2>
+
+<p><a href="http://balotimetro.com">Balotimetro</a> es una aplicación web, cuya función es generar números para el <a href="http://baloto.com">baloto</a> pero de una manera diferente, la <em>magia</em> consiste en que la app genera 6 números basado en los números que han caído con mayor regularidad en todos los sorteos del baloto.</p>
+
+<h3>Desarrollo</h3>
+
+<p>Como les comente quise aprender algo nuevo y opte por <a href="http://sinatrarb.com">Sinatra</a>, un framework de desarrollo de aplicaciones web escrito en <strong>Ruby</strong>.</p>
+
+<p>La experiencia fue muy agradable puesto que a pesar que es un framework muy liviano es sumamente poderoso y escalable.</p>
+
+<p>En los siguientes artículos explicare como comenzar a trabajar con este framework y hacer un poco de deploy con <a href="http://heroku.com">heroku</a> :)</p>
+
+<p>Mientras escribo los artículos los invito a jugar con <a href="http://balotimetro.com">Balotimetro</a> a comentar y a dar sugerencias que siempre son bien recibidas :3</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Hola mundo]]></title>

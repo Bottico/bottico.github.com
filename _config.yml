@@ -17,7 +17,7 @@ description: Blog personal de Angel Celis Botto (@bottico)
 date_format: "ordinal"
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
-subscribe_rss: /atom.xml
+subscribe_rss: http://feeds.feedburner.com/Bottico
 subscribe_email: 
 # RSS feeds can list your email address if you like
 email: angelbotto@gmail.com

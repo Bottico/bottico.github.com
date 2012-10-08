@@ -1,0 +1,5 @@
+<div class="highlight"><pre><span class="n">before</span> <span class="k">do</span>
+		<span class="n">redirect</span> <span class="n">request</span><span class="o">.</span><span class="n">url</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sr">/www\./</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">),</span> <span class="mi">301</span> <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">host</span> <span class="o">=~</span> <span class="sr">/^www/</span>
+<span class="k">end</span>
+</pre>
+</div>

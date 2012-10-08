@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: seo | Bottico]]></title>
+  <link href="http://botti.co/blog/categories/seo/atom.xml" rel="self"/>
+  <link href="http://botti.co/"/>
+  <updated>2012-10-08T03:14:03-05:00</updated>
+  <id>http://botti.co/</id>
+  <author>
+    <name><![CDATA[Angel Celis Botto]]></name>
+    <email><![CDATA[angelbotto@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Redirección 301, Paginas sin WWW - Sinatra]]></title>
+    <link href="http://botti.co/blog/redireccion-301/"/>
+    <updated>2012-09-18T04:26:00-05:00</updated>
+    <id>http://botti.co/blog/redireccion-301</id>
+    <content type="html"><![CDATA[<p>Segun tengo entendido, tener accesso habilitado mediante www o sin ella, afecta el posicionamiento de esta en los buscadores (Mal SEO), ya que lo detecta como contenido duplicado.</p>
+
+<p>Cree un snippet que depronto les puede ser util, para redireccionar de midominio.com a www.midominio.com.</p>
+
+<p>```ruby sinatrapp.rb
+before do</p>
+
+<pre><code>    redirect request.url.sub(/www\./, ''), 301 if request.host =~ /^www/
+</code></pre>
+
+<p>end
+```</p>
+
+<h3>Conclución</h3>
+
+<p>No es relevante usar con o sin wwww lo importante, es definir una de estas para una buena optimizacion de nuestro sitio.</p>
+]]></content>
+  </entry>
+  
+</feed>
