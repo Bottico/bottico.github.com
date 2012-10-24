@@ -43,6 +43,15 @@ task :install, :theme do |t, args|
   mkdir_p public_dir
 end
 
+desc "Check all external links"
+task :check_links do
+  
+  LinkChecker.new(
+    :target => 'public',
+    :options => { :no_warnings => true }
+  ).check_uris
+end
+
 #######################
 # Working with Jekyll #
 #######################

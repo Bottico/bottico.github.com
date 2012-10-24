@@ -4,7 +4,7 @@
   <title><![CDATA[Category: sublime | Bottico]]></title>
   <link href="http://botti.co/blog/categories/sublime/atom.xml" rel="self"/>
   <link href="http://botti.co/"/>
-  <updated>2012-10-08T03:46:40-05:00</updated>
+  <updated>2012-10-24T16:28:08-05:00</updated>
   <id>http://botti.co/</id>
   <author>
     <name><![CDATA[Angel Celis Botto]]></name>
@@ -27,6 +27,9 @@
 <p><code>
 ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/sublime
 </code></p>
+
+<!--more-->
+
 
 <p>Con esto creamos un enlace simbolico, llamado <code>sublime</code>. ( Ten en cuenta que este nombre, es el que usaremos para ejecutar sublime desde la terminal, puedes llamarlo como desees para ser mas productivo y rapido podria ser <code>s</code> algo por el estilo)</p>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: sinatra | Bottico]]></title>
   <link href="http://botti.co/blog/categories/sinatra/atom.xml" rel="self"/>
   <link href="http://botti.co/"/>
-  <updated>2012-10-08T03:46:40-05:00</updated>
+  <updated>2012-10-24T16:51:25-05:00</updated>
   <id>http://botti.co/</id>
   <author>
     <name><![CDATA[Angel Celis Botto]]></name>
@@ -21,6 +21,9 @@
     <content type="html"><![CDATA[<h3>El problema</h3>
 
 <p>Muchas veces consumimos datos de otras aplicaciones o otras herramientas ya sea para alimentar nuestro propio servicios o integrando nuestra App con alguna API.</p>
+
+<!--more-->
+
 
 <p>En este caso necesitamos obtener los datos de BContacts de todos y cada uno de los contactos.</p>
 
@@ -113,7 +116,7 @@ before do</p>
 <p>end
 ```</p>
 
-<h3>Conclución</h3>
+<h3>Conclusión</h3>
 
 <p>No es relevante usar con o sin wwww lo importante, es definir una de estas para una buena optimizacion de nuestro sitio.</p>
 ]]></content>
@@ -133,6 +136,9 @@ before do</p>
 <p>Para poner en practica y entender un poco de Sinatra vamos a crear una mini aplicación encargada de almacenar contactos cuyo nombre sera <strong>bcontacts</strong>, los cuales podamos consultar a nivel general o de manera única.</p>
 
 <p>Que contara con API para consumir estos datos mediante json o xml.</p>
+
+<!--more-->
+
 
 <h3>Interfaz</h3>
 
@@ -221,6 +227,9 @@ Estuve unos días alejado del blog, la razón se debe a que me propuse aprender 
 <h2>Balotimetro</h2>
 
 <p><a href="http://balotimetro.com">Balotimetro</a> es una aplicación web, cuya función es generar números para el <a href="http://baloto.com">baloto</a> pero de una manera diferente, la <em>magia</em> consiste en que la app genera 6 números basado en los números que han caído con mayor regularidad en todos los sorteos del baloto.</p>
+
+<!--more-->
+
 
 <h3>Desarrollo</h3>
 

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: webdevelopment | Bottico]]></title>
+  <link href="http://botti.co/blog/categories/webdevelopment/atom.xml" rel="self"/>
+  <link href="http://botti.co/"/>
+  <updated>2012-10-24T16:51:25-05:00</updated>
+  <id>http://botti.co/</id>
+  <author>
+    <name><![CDATA[Angel Celis Botto]]></name>
+    <email><![CDATA[angelbotto@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Yeoman init]]></title>
+    <link href="http://botti.co/blog/yeoman-init/"/>
+    <updated>2012-10-16T00:51:00-05:00</updated>
+    <id>http://botti.co/blog/yeoman-init</id>
+    <content type="html"><![CDATA[<p><img class="center" src="http://yeoman.io/assets/img/yeoman-logo.png"></p>
+
+<p><a href="http://yeoman.io/">Yeoman</a> es un bigoton muy popular en el patio de juegos de los desarrolladores, una herramienta que simplifica la configuración y gestión de proyectos de aplicaciones web.</p>
+
+<!--more-->
+
+
+<p><blockquote><p>Yeoman is a robust and opinionated set of tools, libraries, and a workflow that can help developers quickly build beautiful, compelling web apps.</p></p><p><p></p><footer><strong>yeoman</strong> <cite><a href='http://yeoman.io/index.html'>Modern Workflows for Modern Webapps</a></cite></footer></blockquote></p>
+
+<h2>Instalando</h2>
+
+<p>Su instalación es muy simple basta con ejecutar el siguiente comando en la consola.</p>
+
+<p><code>
+curl -L get.yeoman.io | sh
+</code></p>
+
+<p><strong>Cosas que debes tener en cuenta</strong></p>
+
+<p>Para instalar <strong>Yeoman</strong> es necesario tener instaladas previamente las siguientes herramientas.</p>
+
+<ul>
+<li>curl</li>
+<li>git</li>
+<li>rubygems</li>
+<li>jpegtran</li>
+<li>optipng</li>
+<li>nodejs</li>
+<li>compass</li>
+<li>phantomjs</li>
+<li>Grunt</li>
+</ul>
+
+
+<p>En su <a href="https://github.com/yeoman/yeoman/wiki/Manual-Install">documentacion oficial</a> encontraras mas información.</p>
+
+<h2>Construyendo un proyecto</h2>
+
+<p>Construir un proyecto con <strong>Yeoman</strong> es muy fácil basta con ejecutar el siguiente comando en la consola.</p>
+
+<p><code>
+yeoman init
+</code></p>
+
+<p>Este comando muestra una pantalla de bienvenida, y una lista de opciones de herramientas para usar en el proyecto.</p>
+
+<p>Puedes utilizar <strong>Yeoman</strong> para arrancar el proyecto, instalar dependencias, actualizarlas, realizar pruebas entre otras cosas.</p>
+
+<p>Sin duda alguna es un nuevo juguete que vale la pena echarle un ojito :)</p>
+]]></content>
+  </entry>
+  
+</feed>

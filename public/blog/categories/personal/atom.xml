@@ -4,7 +4,7 @@
   <title><![CDATA[Category: personal | Bottico]]></title>
   <link href="http://botti.co/blog/categories/personal/atom.xml" rel="self"/>
   <link href="http://botti.co/"/>
-  <updated>2012-10-08T03:46:40-05:00</updated>
+  <updated>2012-10-24T16:51:25-05:00</updated>
   <id>http://botti.co/</id>
   <author>
     <name><![CDATA[Angel Celis Botto]]></name>
@@ -23,6 +23,9 @@
 <p>Los días 6 y 7 de octubre del 2012 nos encontramos una gran cantidad de desarrolladores en <strong>Wayra Colombia</strong> para llevar acabo una <strong>hackaton</strong> para dar solución o implementar una nueva herramienta a 2 temas en especifico.</p>
 
 <p>Durante 24 horas seguidas :) desarrollamos (corruptyle participaco reportaco) nunca le pusimos un nombre xD. una herramienta la cual consiste en viralizar socializar compartir y reportar información publicitaria sobre un candidato X mediante una app móvil o directamente sobre la web, con una interfaz de usuario bastante agradable enfocada no en estadísticas sino en lo que realmente le interesa al usuario el reporte!. algo súper del proyecto fue la elaboración de un API para permitir a otros desarrolladores consumir nuestros datos para crear sus propias herramientas o generar de manera independiente nuevos proyectos.</p>
+
+<!--more-->
+
 
 <h3>Que usamos</h3>
 
@@ -59,6 +62,9 @@ Estuve unos días alejado del blog, la razón se debe a que me propuse aprender 
 <h2>Balotimetro</h2>
 
 <p><a href="http://balotimetro.com">Balotimetro</a> es una aplicación web, cuya función es generar números para el <a href="http://baloto.com">baloto</a> pero de una manera diferente, la <em>magia</em> consiste en que la app genera 6 números basado en los números que han caído con mayor regularidad en todos los sorteos del baloto.</p>
+
+<!--more-->
+
 
 <h3>Desarrollo</h3>
 

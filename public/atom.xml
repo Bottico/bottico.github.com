@@ -4,7 +4,7 @@
   <title><![CDATA[Bottico]]></title>
   <link href="http://botti.co/atom.xml" rel="self"/>
   <link href="http://botti.co/"/>
-  <updated>2012-10-08T03:46:40-05:00</updated>
+  <updated>2012-10-24T16:51:25-05:00</updated>
   <id>http://botti.co/</id>
   <author>
     <name><![CDATA[Angel Celis Botto]]></name>
@@ -12,6 +12,64 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Yeoman init]]></title>
+    <link href="http://botti.co/blog/yeoman-init/"/>
+    <updated>2012-10-16T00:51:00-05:00</updated>
+    <id>http://botti.co/blog/yeoman-init</id>
+    <content type="html"><![CDATA[<p><img class="center" src="http://yeoman.io/assets/img/yeoman-logo.png"></p>
+
+<p><a href="http://yeoman.io/">Yeoman</a> es un bigoton muy popular en el patio de juegos de los desarrolladores, una herramienta que simplifica la configuración y gestión de proyectos de aplicaciones web.</p>
+
+<!--more-->
+
+
+<blockquote><p>Yeoman is a robust and opinionated set of tools, libraries, and a workflow that can help developers quickly build beautiful, compelling web apps.</p><footer><strong>yeoman</strong> <cite><a href='http://yeoman.io/index.html'>Modern Workflows for Modern Webapps</a></cite></footer></blockquote>
+
+
+<h2>Instalando</h2>
+
+<p>Su instalación es muy simple basta con ejecutar el siguiente comando en la consola.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>curl -L get.yeoman.io | sh</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Cosas que debes tener en cuenta</strong></p>
+
+<p>Para instalar <strong>Yeoman</strong> es necesario tener instaladas previamente las siguientes herramientas.</p>
+
+<ul>
+<li>curl</li>
+<li>git</li>
+<li>rubygems</li>
+<li>jpegtran</li>
+<li>optipng</li>
+<li>nodejs</li>
+<li>compass</li>
+<li>phantomjs</li>
+<li>Grunt</li>
+</ul>
+
+
+<p>En su <a href="https://github.com/yeoman/yeoman/wiki/Manual-Install">documentacion oficial</a> encontraras mas información.</p>
+
+<h2>Construyendo un proyecto</h2>
+
+<p>Construir un proyecto con <strong>Yeoman</strong> es muy fácil basta con ejecutar el siguiente comando en la consola.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>yeoman init</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Este comando muestra una pantalla de bienvenida, y una lista de opciones de herramientas para usar en el proyecto.</p>
+
+<p>Puedes utilizar <strong>Yeoman</strong> para arrancar el proyecto, instalar dependencias, actualizarlas, realizar pruebas entre otras cosas.</p>
+
+<p>Sin duda alguna es un nuevo juguete que vale la pena echarle un ojito :)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ganamos RHOK - HAC2012 - Hackers contra la corrupcion]]></title>
@@ -23,6 +81,9 @@
 <p>Los días 6 y 7 de octubre del 2012 nos encontramos una gran cantidad de desarrolladores en <strong>Wayra Colombia</strong> para llevar acabo una <strong>hackaton</strong> para dar solución o implementar una nueva herramienta a 2 temas en especifico.</p>
 
 <p>Durante 24 horas seguidas :) desarrollamos (corruptyle participaco reportaco) nunca le pusimos un nombre xD. una herramienta la cual consiste en viralizar socializar compartir y reportar información publicitaria sobre un candidato X mediante una app móvil o directamente sobre la web, con una interfaz de usuario bastante agradable enfocada no en estadísticas sino en lo que realmente le interesa al usuario el reporte!. algo súper del proyecto fue la elaboración de un API para permitir a otros desarrolladores consumir nuestros datos para crear sus propias herramientas o generar de manera independiente nuevos proyectos.</p>
+
+<!--more-->
+
 
 <h3>Que usamos</h3>
 
@@ -65,6 +126,9 @@ Desarrollo movil <strong>Cordova</strong></p>
 
 
 <p></p>
+
+<!--more-->
+
 
 <p>Con esto creamos un enlace simbolico, llamado <code>sublime</code>. ( Ten en cuenta que este nombre, es el que usaremos para ejecutar sublime desde la terminal, puedes llamarlo como desees para ser mas productivo y rapido podria ser <code>s</code> algo por el estilo)</p>
 
@@ -118,6 +182,9 @@ Desarrollo movil <strong>Cordova</strong></p>
     <content type="html"><![CDATA[<h3>El problema</h3>
 
 <p>Muchas veces consumimos datos de otras aplicaciones o otras herramientas ya sea para alimentar nuestro propio servicios o integrando nuestra App con alguna API.</p>
+
+<!--more-->
+
 
 <p>En este caso necesitamos obtener los datos de BContacts de todos y cada uno de los contactos.</p>
 
@@ -238,7 +305,7 @@ Desarrollo movil <strong>Cordova</strong></p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h3>Conclución</h3>
+<h3>Conclusión</h3>
 
 <p>No es relevante usar con o sin wwww lo importante, es definir una de estas para una buena optimizacion de nuestro sitio.</p>
 ]]></content>
@@ -258,6 +325,9 @@ Desarrollo movil <strong>Cordova</strong></p>
 <p>Para poner en practica y entender un poco de Sinatra vamos a crear una mini aplicación encargada de almacenar contactos cuyo nombre sera <strong>bcontacts</strong>, los cuales podamos consultar a nivel general o de manera única.</p>
 
 <p>Que contara con API para consumir estos datos mediante json o xml.</p>
+
+<!--more-->
+
 
 <h3>Interfaz</h3>
 
@@ -347,6 +417,9 @@ Estuve unos días alejado del blog, la razón se debe a que me propuse aprender 
 
 <p><a href="http://balotimetro.com">Balotimetro</a> es una aplicación web, cuya función es generar números para el <a href="http://baloto.com">baloto</a> pero de una manera diferente, la <em>magia</em> consiste en que la app genera 6 números basado en los números que han caído con mayor regularidad en todos los sorteos del baloto.</p>
 
+<!--more-->
+
+
 <h3>Desarrollo</h3>
 
 <p>Como les comente quise aprender algo nuevo y opte por <a href="http://sinatrarb.com">Sinatra</a>, un framework de desarrollo de aplicaciones web escrito en <strong>Ruby</strong>.</p>
@@ -356,26 +429,6 @@ Estuve unos días alejado del blog, la razón se debe a que me propuse aprender 
 <p>En los siguientes artículos explicare como comenzar a trabajar con este framework y hacer un poco de deploy con <a href="http://heroku.com">heroku</a> :)</p>
 
 <p>Mientras escribo los artículos los invito a jugar con <a href="http://balotimetro.com">Balotimetro</a> a comentar y a dar sugerencias que siempre son bien recibidas :3</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Los proyectos con mas forks en github]]></title>
-    <link href="http://botti.co/blog/los-proyectos-con-mas-forks-en-github/"/>
-    <updated>2012-09-03T11:02:00-05:00</updated>
-    <id>http://botti.co/blog/los-proyectos-con-mas-forks-en-github</id>
-    <content type="html"><![CDATA[<p><img class="center" src="http://farm9.staticflickr.com/8315/7918858724_b6479aa961_o.jpg" title="most forked github" >
-<img class="center" src="http://farm9.staticflickr.com/8444/7918881746_f0fb9067e7_o.jpg" title="most forked github" >
-<img class="center" src="http://farm9.staticflickr.com/8297/7918882024_25c5cb2789_o.jpg" title="most forked github" >
-<img class="center" src="http://farm9.staticflickr.com/8297/7918882308_370edae9e4_o.jpg" title="most forked github" ></p>
-
-<p><strong>fuente:</strong></p>
-
-<ul>
-<li><a href="http://www.cyberhades.com/2012/09/03/los-proyectos-mas-duplicados-github-infografia/">CyberHader</a></li>
-<li><a href="https://github.com/popular/forked">Github</a></li>
-</ul>
-
 ]]></content>
   </entry>
   
@@ -393,6 +446,11 @@ Estuve unos días alejado del blog, la razón se debe a que me propuse aprender 
 <p><img class="center" src="http://dl.dropbox.com/u/27031193/botti.co/captura.png" title="perfomance" ></p>
 
 <p>Usualmente se acostumbra a cargar los archivos JavaScript <code>&lt;script&gt;</code> en las cabezeras del documento, <code>&lt;head&gt;</code>esto en cierto sentido no es malo, más sin embargo puede causar un problema a la hora de renderizar nuestra plantilla.</p>
+
+<!-- more -->
+
+
+
 
 <figure class='code'><figcaption><span>Ficheros js cargados desde head</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -505,6 +563,9 @@ sean cargado de ultimos y nuestra plantilla sea renderizado en un mejor tiempo.<
 
 
 <p></p>
+
+<!-- more -->
+
 
 <h3>Jugando un poco con sass</h3>
 
