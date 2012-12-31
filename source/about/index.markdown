@@ -7,34 +7,15 @@ footer: true
 sidebar: true
 ---
 
-``` json Sobre mi
-{
-	"nombre": "Angel Celis Botto",
-	"edad": 22,
-	"descrip": "Que tal! soy un desarrollador de esos apasionados, 
-			  que se emocionan escribiendo un hola mudo en nuevos 
-			  lenguajes, y de esos que toma cafe, comiendo 
-			  pizza resolviendo problemas.
+Soy la persona menos poetica que vas a conocer en tu vida. En cualquier dia en comun me puedes ver con uno de mis amigos conversando de basura que no tiene nada que ver con la filosofia. Veras a un hombre delgado y alto, un poco torpe al caminar. Pero no podras comprenderme solo mirando afuera. Tendrias que ver mas alla de el hombre con la camisa V poco cuidado, te tendrias que dar a la tarea de observar pero con el alma. Pero como eso nunca lo podras hacer, invítame un cafe :)
 
-			  Disfruto buscando formas originales y creativas para 
-			  cambiar el mundo. amante del diseño, la fotografía 
-			  y la programación.",
-	"love": {
-		"ruby": true,
-		"html": true,
-		"css": true,
-		"JavaScript": true
-	},
-	"socialMedia":{
-		"github": "angelbotto",
-		"twitter": "bottico",
-		"facebook": "angelbotto",
-		"googleplus": 100537306662051964513
-	}
-}
+**Lo que hago: **
 
-```
+CEO de [Kreattiewe.co](http://kreattiewe.co), Disfruto buscando formas originales y creativas para cambiar el mundo. considero la programación como poesía y el diseño como el arte mas perfecto del planeta.
 
-Ok, ok, mi nombre es **Angel Celis Botto**, tengo 22 años de edad, soy de la hermosa ciudad de **Santa marta**, **Colombia**, vivo actualmente en la ciudad de Bogota. **CEO** en **Kreattiewe** y **Hyroki**, desarrollo en el hermoso lenguaje **Ruby**, amante del desarrollo, **Rails, sinatra, jekyll, html5, haml, css3, sass, compass, javascript, jquery, mootools, java, android..** soy de esos programadores apasionado que le encanta sacar un "Hola Mundo" en nuevos lenguajes. 
+**Redes sociales**
 
-*Para contactarme parsea el json u.u*
+* [Github](http://github.com/angelbotto)
+* [Twitter](http://twitter.com/bottico)
+* [Facebook](https://www.facebook.com/angelbotto)
+* [GooglePlus](https://plus.google.com/100537306662051964513/about)

@@ -4,7 +4,7 @@
   <title><![CDATA[Bottico]]></title>
   <link href="http://botti.co/atom.xml" rel="self"/>
   <link href="http://botti.co/"/>
-  <updated>2012-10-24T16:51:25-05:00</updated>
+  <updated>2012-12-31T00:45:01-05:00</updated>
   <id>http://botti.co/</id>
   <author>
     <name><![CDATA[Angel Celis Botto]]></name>
@@ -429,6 +429,26 @@ Estuve unos días alejado del blog, la razón se debe a que me propuse aprender 
 <p>En los siguientes artículos explicare como comenzar a trabajar con este framework y hacer un poco de deploy con <a href="http://heroku.com">heroku</a> :)</p>
 
 <p>Mientras escribo los artículos los invito a jugar con <a href="http://balotimetro.com">Balotimetro</a> a comentar y a dar sugerencias que siempre son bien recibidas :3</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Los proyectos con mas forks en github]]></title>
+    <link href="http://botti.co/blog/los-proyectos-con-mas-forks-en-github/"/>
+    <updated>2012-09-03T11:02:00-05:00</updated>
+    <id>http://botti.co/blog/los-proyectos-con-mas-forks-en-github</id>
+    <content type="html"><![CDATA[<p><img class="center" src="http://farm9.staticflickr.com/8315/7918858724_b6479aa961_o.jpg" title="most forked github" >
+<img class="center" src="http://farm9.staticflickr.com/8444/7918881746_f0fb9067e7_o.jpg" title="most forked github" >
+<img class="center" src="http://farm9.staticflickr.com/8297/7918882024_25c5cb2789_o.jpg" title="most forked github" >
+<img class="center" src="http://farm9.staticflickr.com/8297/7918882308_370edae9e4_o.jpg" title="most forked github" ></p>
+
+<p><strong>fuente:</strong></p>
+
+<ul>
+<li><a href="http://www.cyberhades.com/2012/09/03/los-proyectos-mas-duplicados-github-infografia/">CyberHader</a></li>
+<li><a href="https://github.com/popular/forked">Github</a></li>
+</ul>
+
 ]]></content>
   </entry>
   
