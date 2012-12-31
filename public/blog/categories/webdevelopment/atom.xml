@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: webdevelopment | Bottico]]></title>
-  <link href="http://botti.co/blog/categories/webdevelopment/atom.xml" rel="self"/>
-  <link href="http://botti.co/"/>
-  <updated>2012-12-31T00:45:01-05:00</updated>
-  <id>http://botti.co/</id>
+  <link href="http://Bottico.github.com/blog/categories/webdevelopment/atom.xml" rel="self"/>
+  <link href="http://Bottico.github.com/"/>
+  <updated>2012-12-31T02:56:23-05:00</updated>
+  <id>http://Bottico.github.com/</id>
   <author>
     <name><![CDATA[Angel Celis Botto]]></name>
     <email><![CDATA[angelbotto@gmail.com]]></email>
@@ -14,10 +14,257 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Emails con pony]]></title>
+    <link href="http://Bottico.github.com/blog/emails-con-pony/"/>
+    <updated>2012-12-31T02:25:00-05:00</updated>
+    <id>http://Bottico.github.com/blog/emails-con-pony</id>
+    <content type="html"><![CDATA[<p><img class="center" src="http://fc02.deviantart.net/fs71/f/2011/164/f/8/google_chrome_icon_by_kitsuneymg-d3ita1w.png"></p>
+
+<p>Pony es una gema que me encanta, facilita de manera increible enviars emails con ruby.</p>
+
+<p><blockquote><p>Pony, the express way to send email in Ruby</p></blockquote></p>
+
+<h3>Pony gem</h3>
+
+<p>Para el uso de pony debemos agregar a nuestro gemfile lo siguiente</p>
+
+<p><code>ruby Gemfile
+gem "pony"
+</code></p>
+
+<p>y a nuestro app.rb</p>
+
+<p><code>ruby app.rb
+require 'pony'
+</code></p>
+
+<h3>Enviando emails</h3>
+
+<p>enviar emails es igual de facil simplemente hace basta lo siguiente</p>
+
+<p>``` ruby app.rb
+Pony.mail(</p>
+
+<pre><code>:to =&gt; 'tu@ejemplo.com', 
+:from =&gt; 'yo@ejemplo.com', 
+:subject =&gt; 'Hoooola', 
+:body =&gt; 'faciiil verdad'
+</code></pre>
+
+<p>)
+```</p>
+
+<p>bastante facil verdad? quieres mas?</p>
+
+<!--more-->
+
+
+<p>Pony nos da una gran varidad de opciones las cuales son:</p>
+
+<ul>
+<li><strong>to</strong> Quien recibe el email</li>
+<li><strong>cc</strong> Otras personas que reciben una copia exacta del email</li>
+<li><strong>bcc</strong> Otras personas que reciben una copia exacta del email de manera oculta</li>
+<li><strong>from</strong> Quien envia el email</li>
+<li><strong>body</strong> Contenido del mensaje ( texto plano )</li>
+<li><strong>html_body</strong> Contenido del email en html</li>
+<li><strong>subject</strong> No debo explicarlo verdad?</li>
+<li><strong>charset</strong> En caso de que la codificación sea diferente a utf-8</li>
+<li><strong>attachments</strong> Archivos adjuntados</li>
+<li><strong>headers</strong> Cabezeras personalizadas</li>
+</ul>
+
+
+<p>Ejemplo:</p>
+
+<p>``` ruby app.rb
+Pony.mail(</p>
+
+<pre><code>:to =&gt; 'tu@ejemplo.com', 
+:bcc =&gt; 'oculto@ejemplo.com'
+:from =&gt; 'yo@ejemplo.com', 
+:subject =&gt; 'Hoooola', 
+:html_body =&gt; (erb :email, :layout =&gt; false)
+</code></pre>
+
+<p>)
+```</p>
+
+<p>Enviando emails con gmail y pony :)</p>
+
+<p>``` ruby app.rb
+Pony.mail(</p>
+
+<pre><code>:to =&gt; 'tu@ejemplo.com', 
+:from =&gt; 'yo@ejemplo.com', 
+:subject =&gt; 'Hoooola', 
+:html_body =&gt; (erb :email, :layout =&gt; false),
+:via =&gt; :smtp,
+</code></pre>
+
+<p>  :via_options => {</p>
+
+<pre><code>:address              =&gt; 'smtp.gmail.com',
+:port                 =&gt; '587',
+:enable_starttls_auto =&gt; true,
+:user_name            =&gt; 'angelbotto@gmail.com',
+:password             =&gt; 'estenoesmipasswordnilointentes',
+:authentication       =&gt; :plain, # :plain, :login, :cram_md5, no auth by default
+:domain               =&gt; "localhost.localdomain" 
+</code></pre>
+
+<p>  }
+)
+```</p>
+
+<p>Enviando emails con sendgrid (heroku) y pony</p>
+
+<p>``` ruby app.rb
+Pony.mail(</p>
+
+<pre><code>:to =&gt; 'tu@ejemplo.com', 
+:from =&gt; 'yo@ejemplo.com', 
+:subject =&gt; 'Hoooola', 
+:html_body =&gt; (erb :email, :layout =&gt; false),
+:via =&gt; :smtp,
+</code></pre>
+
+<p>  :via_options => {</p>
+
+<pre><code>:address =&gt; 'smtp.sendgrid.net',
+    :port =&gt; '587',
+    :domain =&gt; 'heroku.com',
+    :user_name =&gt; ENV['SENDGRID_USERNAME'],
+    :password =&gt; ENV['SENDGRID_PASSWORD'],
+    :authentication =&gt; :plain,
+    :enable_starttls_auto =&gt; true
+</code></pre>
+
+<p>  }
+)
+```</p>
+
+<p>facil facil facil :) a enviar emails :)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Amazon S3 y Sinatra]]></title>
+    <link href="http://Bottico.github.com/blog/amazon-s3-y-sinatra/"/>
+    <updated>2012-12-31T01:25:00-05:00</updated>
+    <id>http://Bottico.github.com/blog/amazon-s3-y-sinatra</id>
+    <content type="html"><![CDATA[<p><img class="center" src="http://www.oxalto.co.uk/wp-content/uploads/2012/12/amazon.png">
+Amazon tiene tantas herramientas que en mi día a día desarrollando se vuelven indispensables, en especial S3 (Amazon Simple Storage Service)</p>
+
+<p><blockquote><p>Amazon S3 es almacenamiento para Internet. Está diseñado para facilitar a los desarrolladores la informática a escala web.</p><footer><strong>Amazon</strong> <cite><a href='http://aws.amazon.com/es/s3/'>Amazon Simple Storage Service</a></cite></footer></blockquote></p>
+
+<p>La idea de este articulo es integrar Sintra con esta plataforma, lo cual se logra de la siguiente manera.</p>
+
+<!--more-->
+
+
+<h2>aws-s3 Gem</h2>
+
+<p>Ruby cuenta con una gran variedad de gemas que permiten conectarnos con el API de Amazon de una manera muy sencilla, para su uso unicamente hace falta agregar a nuestro gemfile la siguiente linea.</p>
+
+<p><code>ruby Gemfile
+gem 'aws-s3', :require =&gt; 'aws/s3'
+</code></p>
+
+<p>y a nuestro archivode la clase principal en sinatra (en mi caso app.rb)</p>
+
+<p><code>ruby app.rb
+require 'aws/s3'
+</code></p>
+
+<h2>Conectandonos</h2>
+
+<p>ya tenemos nuestra gema y hacemos uso de ella en nuestro proyecto, ahora ebemos conectarnos, necesitaremos tener las credenciales de acceso que podemos obtener <a href="https://portal.aws.amazon.com/gp/aws/securityCredentials">Aqui :)</a>, lo siguiente sera usar esas llaves y crear un metodo que nos conecte cuando lo necesitemos algo asi :)</p>
+
+<p>```ruby helper.rb
+include AWS::S3</p>
+
+<p>def amazon_s3_connect</p>
+
+<pre><code>Base.establish_connection!(
+    :access_key_id =&gt; "clave de acceso aqui",
+    :secret_access_key =&gt; "clave de acceso secreto aqui"
+)
+</code></pre>
+
+<p>end
+```</p>
+
+<h3>Subiendo archivos</h3>
+
+<p>Ya conectados podemos hacer "maravillas" literalmente xD, antes seria bueno que conocieras un poco sobre los <a href="http://notepad.cc/tuwedu41">buckets</a>, ahora subiremos un archivo basado en un formulario html que envia por post nuestro archivo al cual posteriormente lo subiremos :). algo asi:</p>
+
+<p>``` html form.erb</p>
+
+<p><form action="/upload" method="post" class="form-horizontal" enctype="multipart/form-data"></p>
+
+<pre><code>&lt;input type="file" name="photo" &gt;
+</code></pre>
+
+<p></form>
+```</p>
+
+<p>``` ruby app.rb
+class App &lt; Sinatra::Base</p>
+
+<pre><code>helpers Sinatra::HelperBottico
+
+get '/upload' do 
+    erb :form
+end
+
+post '/upload' do 
+
+    unless params[:photo] &amp;&amp; (tmpfile = params[:photo][:tempfile]) &amp;&amp; (name = params[:photo][:filename])
+        redirect '/error'
+    end                     
+
+    while blk = tmpfile.read(65536)
+        amazon_s3_connect
+        AWS::S3::S3Object.store(name, open(tmpfile),"NOMBRE BUCKET",:access =&gt; :public_read)
+    end
+
+    ":D listo calisto"
+end
+</code></pre>
+
+<p>end
+```</p>
+
+<p>En nuestra ruta <code>post '/upload'</code> lo que hacemos es indicar que en dado caso que no se envie ninguna foto redireccione a una pagina de error ( o haga lo que desees ) y creamos 2 variables las cuales son tmpfile que almacena nuestro archivo y name que le asigna un nombre ( puede ser el mismo de la imagen o uno que nosotros especifiquemos ). luego simplemente subimos nuestro archivo al bucket que le indiquemos y le damos acceso publico.</p>
+
+<h3>Eliminando archivos</h3>
+
+<p>Por cuestion de buenas practicas, ahorrar espacio o se te dio la gana xD deseas eliminar un archivo debes hacer lo siguiente.</p>
+
+<p><code>ruby buscar.rb
+amazon_s3_connect
+file = AWS::S3::S3Object.find "NOMBRE ARCHIVO QUE BUSCO", "MI BUCKET"
+file.delete
+</code></p>
+
+<p>lo primero que se hace es buscar el archivo por su nombre en el bucket que deseemos y posteriormente lo eliminamos :)</p>
+
+<h3>Conclusion</h3>
+
+<p>Como ven es bastante simple el manejo de AWS-S3 en ruby simplemente es darle rienda suelta a nuestra imaginacion y usar este servicio para almacenar cuanto se nos ocurra :).</p>
+
+<p>por cierto una buena practica con <a href="http://heroku.com">Heroku</a> es la creacion de variables de configuracion para no escribir nunca en nuestro codigo estos valioso datos.</p>
+
+<p>espero les guste la guia :)</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Yeoman init]]></title>
-    <link href="http://botti.co/blog/yeoman-init/"/>
+    <link href="http://Bottico.github.com/blog/yeoman-init/"/>
     <updated>2012-10-16T00:51:00-05:00</updated>
-    <id>http://botti.co/blog/yeoman-init</id>
+    <id>http://Bottico.github.com/blog/yeoman-init</id>
     <content type="html"><![CDATA[<p><img class="center" src="http://yeoman.io/assets/img/yeoman-logo.png"></p>
 
 <p><a href="http://yeoman.io/">Yeoman</a> es un bigoton muy popular en el patio de juegos de los desarrolladores, una herramienta que simplifica la configuración y gestión de proyectos de aplicaciones web.</p>

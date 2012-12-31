@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: ideas | Bottico]]></title>
-  <link href="http://botti.co/blog/categories/ideas/atom.xml" rel="self"/>
-  <link href="http://botti.co/"/>
-  <updated>2012-12-31T00:45:01-05:00</updated>
-  <id>http://botti.co/</id>
+  <link href="http://Bottico.github.com/blog/categories/ideas/atom.xml" rel="self"/>
+  <link href="http://Bottico.github.com/"/>
+  <updated>2012-12-31T02:56:23-05:00</updated>
+  <id>http://Bottico.github.com/</id>
   <author>
     <name><![CDATA[Angel Celis Botto]]></name>
     <email><![CDATA[angelbotto@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Lanzar Sublime Text 2 desde la terminal en Mac OS X]]></title>
-    <link href="http://botti.co/blog/lanzar-sublime-text-2-desde-la-terminal-en-mac-os-x/"/>
+    <link href="http://Bottico.github.com/blog/lanzar-sublime-text-2-desde-la-terminal-en-mac-os-x/"/>
     <updated>2012-10-08T02:54:00-05:00</updated>
-    <id>http://botti.co/blog/lanzar-sublime-text-2-desde-la-terminal-en-mac-os-x</id>
+    <id>http://Bottico.github.com/blog/lanzar-sublime-text-2-desde-la-terminal-en-mac-os-x</id>
     <content type="html"><![CDATA[<p>Queria compartir un <strong>recurso</strong> bastante productivo para lanzar sublime text 2 desde nuestra terminal.</p>
 
 <h3>Instalacion</h3>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Bottico]]></title>
-  <link href="http://botti.co/atom.xml" rel="self"/>
-  <link href="http://botti.co/"/>
-  <updated>2012-12-31T00:45:01-05:00</updated>
-  <id>http://botti.co/</id>
+  <link href="http://Bottico.github.com/atom.xml" rel="self"/>
+  <link href="http://Bottico.github.com/"/>
+  <updated>2012-12-31T02:56:23-05:00</updated>
+  <id>http://Bottico.github.com/</id>
   <author>
     <name><![CDATA[Angel Celis Botto]]></name>
     <email><![CDATA[angelbotto@gmail.com]]></email>
@@ -14,10 +14,331 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Emails con pony]]></title>
+    <link href="http://Bottico.github.com/blog/emails-con-pony/"/>
+    <updated>2012-12-31T02:25:00-05:00</updated>
+    <id>http://Bottico.github.com/blog/emails-con-pony</id>
+    <content type="html"><![CDATA[<p><img class="center" src="http://fc02.deviantart.net/fs71/f/2011/164/f/8/google_chrome_icon_by_kitsuneymg-d3ita1w.png"></p>
+
+<p>Pony es una gema que me encanta, facilita de manera increible enviars emails con ruby.</p>
+
+<blockquote><p>Pony, the express way to send email in Ruby</p></blockquote>
+
+
+<h3>Pony gem</h3>
+
+<p>Para el uso de pony debemos agregar a nuestro gemfile lo siguiente</p>
+
+<figure class='code'><figcaption><span>Gemfile</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s2">&quot;pony&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>y a nuestro app.rb</p>
+
+<figure class='code'><figcaption><span>app.rb</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;pony&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<h3>Enviando emails</h3>
+
+<p>enviar emails es igual de facil simplemente hace basta lo siguiente</p>
+
+<figure class='code'><figcaption><span>app.rb </span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Pony</span><span class="o">.</span><span class="n">mail</span><span class="p">(</span>
+</span><span class='line'>  <span class="ss">:to</span> <span class="o">=&gt;</span> <span class="s1">&#39;tu@ejemplo.com&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:from</span> <span class="o">=&gt;</span> <span class="s1">&#39;yo@ejemplo.com&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:subject</span> <span class="o">=&gt;</span> <span class="s1">&#39;Hoooola&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:body</span> <span class="o">=&gt;</span> <span class="s1">&#39;faciiil verdad&#39;</span>
+</span><span class='line'><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<p>bastante facil verdad? quieres mas?</p>
+
+<!--more-->
+
+
+<p>Pony nos da una gran varidad de opciones las cuales son:</p>
+
+<ul>
+<li><strong>to</strong> Quien recibe el email</li>
+<li><strong>cc</strong> Otras personas que reciben una copia exacta del email</li>
+<li><strong>bcc</strong> Otras personas que reciben una copia exacta del email de manera oculta</li>
+<li><strong>from</strong> Quien envia el email</li>
+<li><strong>body</strong> Contenido del mensaje ( texto plano )</li>
+<li><strong>html_body</strong> Contenido del email en html</li>
+<li><strong>subject</strong> No debo explicarlo verdad?</li>
+<li><strong>charset</strong> En caso de que la codificación sea diferente a utf-8</li>
+<li><strong>attachments</strong> Archivos adjuntados</li>
+<li><strong>headers</strong> Cabezeras personalizadas</li>
+</ul>
+
+
+<p>Ejemplo:</p>
+
+<figure class='code'><figcaption><span>app.rb </span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Pony</span><span class="o">.</span><span class="n">mail</span><span class="p">(</span>
+</span><span class='line'>  <span class="ss">:to</span> <span class="o">=&gt;</span> <span class="s1">&#39;tu@ejemplo.com&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:bcc</span> <span class="o">=&gt;</span> <span class="s1">&#39;oculto@ejemplo.com&#39;</span>
+</span><span class='line'>  <span class="ss">:from</span> <span class="o">=&gt;</span> <span class="s1">&#39;yo@ejemplo.com&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:subject</span> <span class="o">=&gt;</span> <span class="s1">&#39;Hoooola&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:html_body</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="n">erb</span> <span class="ss">:email</span><span class="p">,</span> <span class="ss">:layout</span> <span class="o">=&gt;</span> <span class="kp">false</span><span class="p">)</span>
+</span><span class='line'><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<p>Enviando emails con gmail y pony :)</p>
+
+<figure class='code'><figcaption><span>app.rb </span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Pony</span><span class="o">.</span><span class="n">mail</span><span class="p">(</span>
+</span><span class='line'>  <span class="ss">:to</span> <span class="o">=&gt;</span> <span class="s1">&#39;tu@ejemplo.com&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:from</span> <span class="o">=&gt;</span> <span class="s1">&#39;yo@ejemplo.com&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:subject</span> <span class="o">=&gt;</span> <span class="s1">&#39;Hoooola&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:html_body</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="n">erb</span> <span class="ss">:email</span><span class="p">,</span> <span class="ss">:layout</span> <span class="o">=&gt;</span> <span class="kp">false</span><span class="p">),</span>
+</span><span class='line'>  <span class="ss">:via</span> <span class="o">=&gt;</span> <span class="ss">:smtp</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:via_options</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>    <span class="ss">:address</span>              <span class="o">=&gt;</span> <span class="s1">&#39;smtp.gmail.com&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="ss">:port</span>                 <span class="o">=&gt;</span> <span class="s1">&#39;587&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="ss">:enable_starttls_auto</span> <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">,</span>
+</span><span class='line'>    <span class="ss">:user_name</span>            <span class="o">=&gt;</span> <span class="s1">&#39;angelbotto@gmail.com&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="ss">:password</span>             <span class="o">=&gt;</span> <span class="s1">&#39;estenoesmipasswordnilointentes&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="ss">:authentication</span>       <span class="o">=&gt;</span> <span class="ss">:plain</span><span class="p">,</span> <span class="c1"># :plain, :login, :cram_md5, no auth by default</span>
+</span><span class='line'>    <span class="ss">:domain</span>               <span class="o">=&gt;</span> <span class="s2">&quot;localhost.localdomain&quot;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<p>Enviando emails con sendgrid (heroku) y pony</p>
+
+<figure class='code'><figcaption><span>app.rb </span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Pony</span><span class="o">.</span><span class="n">mail</span><span class="p">(</span>
+</span><span class='line'>  <span class="ss">:to</span> <span class="o">=&gt;</span> <span class="s1">&#39;tu@ejemplo.com&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:from</span> <span class="o">=&gt;</span> <span class="s1">&#39;yo@ejemplo.com&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:subject</span> <span class="o">=&gt;</span> <span class="s1">&#39;Hoooola&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:html_body</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="n">erb</span> <span class="ss">:email</span><span class="p">,</span> <span class="ss">:layout</span> <span class="o">=&gt;</span> <span class="kp">false</span><span class="p">),</span>
+</span><span class='line'>  <span class="ss">:via</span> <span class="o">=&gt;</span> <span class="ss">:smtp</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:via_options</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>    <span class="ss">:address</span> <span class="o">=&gt;</span> <span class="s1">&#39;smtp.sendgrid.net&#39;</span><span class="p">,</span>
+</span><span class='line'>      <span class="ss">:port</span> <span class="o">=&gt;</span> <span class="s1">&#39;587&#39;</span><span class="p">,</span>
+</span><span class='line'>      <span class="ss">:domain</span> <span class="o">=&gt;</span> <span class="s1">&#39;heroku.com&#39;</span><span class="p">,</span>
+</span><span class='line'>      <span class="ss">:user_name</span> <span class="o">=&gt;</span> <span class="no">ENV</span><span class="o">[</span><span class="s1">&#39;SENDGRID_USERNAME&#39;</span><span class="o">]</span><span class="p">,</span>
+</span><span class='line'>      <span class="ss">:password</span> <span class="o">=&gt;</span> <span class="no">ENV</span><span class="o">[</span><span class="s1">&#39;SENDGRID_PASSWORD&#39;</span><span class="o">]</span><span class="p">,</span>
+</span><span class='line'>      <span class="ss">:authentication</span> <span class="o">=&gt;</span> <span class="ss">:plain</span><span class="p">,</span>
+</span><span class='line'>      <span class="ss">:enable_starttls_auto</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<p>facil facil facil :) a enviar emails :)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Amazon S3 y Sinatra]]></title>
+    <link href="http://Bottico.github.com/blog/amazon-s3-y-sinatra/"/>
+    <updated>2012-12-31T01:25:00-05:00</updated>
+    <id>http://Bottico.github.com/blog/amazon-s3-y-sinatra</id>
+    <content type="html"><![CDATA[<p><img class="center" src="http://www.oxalto.co.uk/wp-content/uploads/2012/12/amazon.png">
+Amazon tiene tantas herramientas que en mi día a día desarrollando se vuelven indispensables, en especial S3 (Amazon Simple Storage Service)</p>
+
+<blockquote><p>Amazon S3 es almacenamiento para Internet. Está diseñado para facilitar a los desarrolladores la informática a escala web.</p><footer><strong>Amazon</strong> <cite><a href='http://aws.amazon.com/es/s3/'>Amazon Simple Storage Service</a></cite></footer></blockquote>
+
+
+<p>La idea de este articulo es integrar Sintra con esta plataforma, lo cual se logra de la siguiente manera.</p>
+
+<!--more-->
+
+
+<h2>aws-s3 Gem</h2>
+
+<p>Ruby cuenta con una gran variedad de gemas que permiten conectarnos con el API de Amazon de una manera muy sencilla, para su uso unicamente hace falta agregar a nuestro gemfile la siguiente linea.</p>
+
+<figure class='code'><figcaption><span>Gemfile</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;aws-s3&#39;</span><span class="p">,</span> <span class="ss">:require</span> <span class="o">=&gt;</span> <span class="s1">&#39;aws/s3&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<p>y a nuestro archivode la clase principal en sinatra (en mi caso app.rb)</p>
+
+<figure class='code'><figcaption><span>app.rb</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;aws/s3&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Conectandonos</h2>
+
+<p>ya tenemos nuestra gema y hacemos uso de ella en nuestro proyecto, ahora ebemos conectarnos, necesitaremos tener las credenciales de acceso que podemos obtener <a href="https://portal.aws.amazon.com/gp/aws/securityCredentials">Aqui :)</a>, lo siguiente sera usar esas llaves y crear un metodo que nos conecte cuando lo necesitemos algo asi :)</p>
+
+<figure class='code'><figcaption><span>helper.rb</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="kp">include</span> <span class="no">AWS</span><span class="o">::</span><span class="no">S3</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">amazon_s3_connect</span>
+</span><span class='line'>  <span class="no">Base</span><span class="o">.</span><span class="n">establish_connection!</span><span class="p">(</span>
+</span><span class='line'>      <span class="ss">:access_key_id</span> <span class="o">=&gt;</span> <span class="s2">&quot;clave de acceso aqui&quot;</span><span class="p">,</span>
+</span><span class='line'>      <span class="ss">:secret_access_key</span> <span class="o">=&gt;</span> <span class="s2">&quot;clave de acceso secreto aqui&quot;</span>
+</span><span class='line'>  <span class="p">)</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<h3>Subiendo archivos</h3>
+
+<p>Ya conectados podemos hacer &#8220;maravillas&#8221; literalmente xD, antes seria bueno que conocieras un poco sobre los <a href="http://notepad.cc/tuwedu41">buckets</a>, ahora subiremos un archivo basado en un formulario html que envia por post nuestro archivo al cual posteriormente lo subiremos :). algo asi:</p>
+
+<figure class='code'><figcaption><span>form.erb</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">&quot;/upload&quot;</span> <span class="na">method=</span><span class="s">&quot;post&quot;</span> <span class="na">class=</span><span class="s">&quot;form-horizontal&quot;</span> <span class="na">enctype=</span><span class="s">&quot;multipart/form-data&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;file&quot;</span> <span class="na">name=</span><span class="s">&quot;photo&quot;</span> <span class="nt">&gt;</span>
+</span><span class='line'><span class="nt">&lt;/form&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<figure class='code'><figcaption><span>app.rb</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">App</span> <span class="o">&lt;</span> <span class="no">Sinatra</span><span class="o">::</span><span class="no">Base</span>
+</span><span class='line'>  <span class="n">helpers</span> <span class="no">Sinatra</span><span class="o">::</span><span class="no">HelperBottico</span>
+</span><span class='line'>  
+</span><span class='line'>  <span class="n">get</span> <span class="s1">&#39;/upload&#39;</span> <span class="k">do</span>
+</span><span class='line'>      <span class="n">erb</span> <span class="ss">:form</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">post</span> <span class="s1">&#39;/upload&#39;</span> <span class="k">do</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="k">unless</span> <span class="n">params</span><span class="o">[</span><span class="ss">:photo</span><span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">tmpfile</span> <span class="o">=</span> <span class="n">params</span><span class="o">[</span><span class="ss">:photo</span><span class="o">][</span><span class="ss">:tempfile</span><span class="o">]</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="nb">name</span> <span class="o">=</span> <span class="n">params</span><span class="o">[</span><span class="ss">:photo</span><span class="o">][</span><span class="ss">:filename</span><span class="o">]</span><span class="p">)</span>
+</span><span class='line'>          <span class="n">redirect</span> <span class="s1">&#39;/error&#39;</span>
+</span><span class='line'>      <span class="k">end</span>                      
+</span><span class='line'>
+</span><span class='line'>      <span class="k">while</span> <span class="n">blk</span> <span class="o">=</span> <span class="n">tmpfile</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">65536</span><span class="p">)</span>
+</span><span class='line'>          <span class="n">amazon_s3_connect</span>
+</span><span class='line'>          <span class="no">AWS</span><span class="o">::</span><span class="no">S3</span><span class="o">::</span><span class="no">S3Object</span><span class="o">.</span><span class="n">store</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">tmpfile</span><span class="p">),</span><span class="s2">&quot;NOMBRE BUCKET&quot;</span><span class="p">,</span><span class="ss">:access</span> <span class="o">=&gt;</span> <span class="ss">:public_read</span><span class="p">)</span>
+</span><span class='line'>      <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="s2">&quot;:D listo calisto&quot;</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>En nuestra ruta <code>post '/upload'</code> lo que hacemos es indicar que en dado caso que no se envie ninguna foto redireccione a una pagina de error ( o haga lo que desees ) y creamos 2 variables las cuales son tmpfile que almacena nuestro archivo y name que le asigna un nombre ( puede ser el mismo de la imagen o uno que nosotros especifiquemos ). luego simplemente subimos nuestro archivo al bucket que le indiquemos y le damos acceso publico.</p>
+
+<h3>Eliminando archivos</h3>
+
+<p>Por cuestion de buenas practicas, ahorrar espacio o se te dio la gana xD deseas eliminar un archivo debes hacer lo siguiente.</p>
+
+<figure class='code'><figcaption><span>buscar.rb </span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">amazon_s3_connect</span>
+</span><span class='line'><span class="n">file</span> <span class="o">=</span> <span class="no">AWS</span><span class="o">::</span><span class="no">S3</span><span class="o">::</span><span class="no">S3Object</span><span class="o">.</span><span class="n">find</span> <span class="s2">&quot;NOMBRE ARCHIVO QUE BUSCO&quot;</span><span class="p">,</span> <span class="s2">&quot;MI BUCKET&quot;</span>
+</span><span class='line'><span class="n">file</span><span class="o">.</span><span class="n">delete</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>lo primero que se hace es buscar el archivo por su nombre en el bucket que deseemos y posteriormente lo eliminamos :)</p>
+
+<h3>Conclusion</h3>
+
+<p>Como ven es bastante simple el manejo de AWS-S3 en ruby simplemente es darle rienda suelta a nuestra imaginacion y usar este servicio para almacenar cuanto se nos ocurra :).</p>
+
+<p>por cierto una buena practica con <a href="http://heroku.com">Heroku</a> es la creacion de variables de configuracion para no escribir nunca en nuestro codigo estos valioso datos.</p>
+
+<p>espero les guste la guia :)</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Yeoman init]]></title>
-    <link href="http://botti.co/blog/yeoman-init/"/>
+    <link href="http://Bottico.github.com/blog/yeoman-init/"/>
     <updated>2012-10-16T00:51:00-05:00</updated>
-    <id>http://botti.co/blog/yeoman-init</id>
+    <id>http://Bottico.github.com/blog/yeoman-init</id>
     <content type="html"><![CDATA[<p><img class="center" src="http://yeoman.io/assets/img/yeoman-logo.png"></p>
 
 <p><a href="http://yeoman.io/">Yeoman</a> es un bigoton muy popular en el patio de juegos de los desarrolladores, una herramienta que simplifica la configuración y gestión de proyectos de aplicaciones web.</p>
@@ -73,9 +394,9 @@
   
   <entry>
     <title type="html"><![CDATA[Ganamos RHOK - HAC2012 - Hackers contra la corrupcion]]></title>
-    <link href="http://botti.co/blog/ganamos-rhok-hac2012-hackers-contra-la-corrupcion/"/>
+    <link href="http://Bottico.github.com/blog/ganamos-rhok-hac2012-hackers-contra-la-corrupcion/"/>
     <updated>2012-10-08T03:29:00-05:00</updated>
-    <id>http://botti.co/blog/ganamos-rhok-hac2012-hackers-contra-la-corrupcion</id>
+    <id>http://Bottico.github.com/blog/ganamos-rhok-hac2012-hackers-contra-la-corrupcion</id>
     <content type="html"><![CDATA[<p><img class="center" src="https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-prn1/150369_10151080902410642_532265302_n.jpg"></p>
 
 <p>Los días 6 y 7 de octubre del 2012 nos encontramos una gran cantidad de desarrolladores en <strong>Wayra Colombia</strong> para llevar acabo una <strong>hackaton</strong> para dar solución o implementar una nueva herramienta a 2 temas en especifico.</p>
@@ -112,9 +433,9 @@ Desarrollo movil <strong>Cordova</strong></p>
   
   <entry>
     <title type="html"><![CDATA[Lanzar Sublime Text 2 desde la terminal en Mac OS X]]></title>
-    <link href="http://botti.co/blog/lanzar-sublime-text-2-desde-la-terminal-en-mac-os-x/"/>
+    <link href="http://Bottico.github.com/blog/lanzar-sublime-text-2-desde-la-terminal-en-mac-os-x/"/>
     <updated>2012-10-08T02:54:00-05:00</updated>
-    <id>http://botti.co/blog/lanzar-sublime-text-2-desde-la-terminal-en-mac-os-x</id>
+    <id>http://Bottico.github.com/blog/lanzar-sublime-text-2-desde-la-terminal-en-mac-os-x</id>
     <content type="html"><![CDATA[<p>Queria compartir un <strong>recurso</strong> bastante productivo para lanzar sublime text 2 desde nuestra terminal.</p>
 
 <h3>Instalacion</h3>
@@ -176,9 +497,9 @@ Desarrollo movil <strong>Cordova</strong></p>
   
   <entry>
     <title type="html"><![CDATA[Parsear JSON en Sinatra]]></title>
-    <link href="http://botti.co/blog/parsear-json-con-sinatra/"/>
+    <link href="http://Bottico.github.com/blog/parsear-json-con-sinatra/"/>
     <updated>2012-10-08T01:51:00-05:00</updated>
-    <id>http://botti.co/blog/parsear-json-con-sinatra</id>
+    <id>http://Bottico.github.com/blog/parsear-json-con-sinatra</id>
     <content type="html"><![CDATA[<h3>El problema</h3>
 
 <p>Muchas veces consumimos datos de otras aplicaciones o otras herramientas ya sea para alimentar nuestro propio servicios o integrando nuestra App con alguna API.</p>
@@ -289,9 +610,9 @@ Desarrollo movil <strong>Cordova</strong></p>
   
   <entry>
     <title type="html"><![CDATA[Redirección 301, Paginas sin WWW - Sinatra]]></title>
-    <link href="http://botti.co/blog/redireccion-301/"/>
+    <link href="http://Bottico.github.com/blog/redireccion-301/"/>
     <updated>2012-09-18T04:26:00-05:00</updated>
-    <id>http://botti.co/blog/redireccion-301</id>
+    <id>http://Bottico.github.com/blog/redireccion-301</id>
     <content type="html"><![CDATA[<p>Segun tengo entendido, tener accesso habilitado mediante www o sin ella, afecta el posicionamiento de esta en los buscadores (Mal SEO), ya que lo detecta como contenido duplicado.</p>
 
 <p>Cree un snippet que depronto les puede ser util, para redireccionar de midominio.com a www.midominio.com.</p>
@@ -313,9 +634,9 @@ Desarrollo movil <strong>Cordova</strong></p>
   
   <entry>
     <title type="html"><![CDATA[Jugando con Sinatra]]></title>
-    <link href="http://botti.co/blog/conociendo-sinatra/"/>
+    <link href="http://Bottico.github.com/blog/conociendo-sinatra/"/>
     <updated>2012-09-17T16:33:00-05:00</updated>
-    <id>http://botti.co/blog/conociendo-sinatra</id>
+    <id>http://Bottico.github.com/blog/conociendo-sinatra</id>
     <content type="html"><![CDATA[<h2>Sinatra</h2>
 
 <p><a href="http://sinatrarb.com">Sinatra</a> es un framework <strong>(DSL)</strong> de desarrollo para aplicaciones web escrito en <strong>Ruby</strong>. que usa <strong>Rack</strong> para envolver o resolver peticiones HTTP <strong>middleware</strong>.</p>
@@ -407,9 +728,9 @@ Desarrollo movil <strong>Cordova</strong></p>
   
   <entry>
     <title type="html"><![CDATA[Balotimetro]]></title>
-    <link href="http://botti.co/blog/balotimetro/"/>
+    <link href="http://Bottico.github.com/blog/balotimetro/"/>
     <updated>2012-09-17T16:04:00-05:00</updated>
-    <id>http://botti.co/blog/balotimetro</id>
+    <id>http://Bottico.github.com/blog/balotimetro</id>
     <content type="html"><![CDATA[<p><img class="center" src="http://gallery.mailchimp.com/789b1037d0cbbb5eeabfecd29/images/header2.png">
 Estuve unos días alejado del blog, la razón se debe a que me propuse aprender algo nuevo y realizar un pequeño proyecto basado en este nuevo aprendizaje.</p>
 
@@ -433,30 +754,10 @@ Estuve unos días alejado del blog, la razón se debe a que me propuse aprender 
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Los proyectos con mas forks en github]]></title>
-    <link href="http://botti.co/blog/los-proyectos-con-mas-forks-en-github/"/>
-    <updated>2012-09-03T11:02:00-05:00</updated>
-    <id>http://botti.co/blog/los-proyectos-con-mas-forks-en-github</id>
-    <content type="html"><![CDATA[<p><img class="center" src="http://farm9.staticflickr.com/8315/7918858724_b6479aa961_o.jpg" title="most forked github" >
-<img class="center" src="http://farm9.staticflickr.com/8444/7918881746_f0fb9067e7_o.jpg" title="most forked github" >
-<img class="center" src="http://farm9.staticflickr.com/8297/7918882024_25c5cb2789_o.jpg" title="most forked github" >
-<img class="center" src="http://farm9.staticflickr.com/8297/7918882308_370edae9e4_o.jpg" title="most forked github" ></p>
-
-<p><strong>fuente:</strong></p>
-
-<ul>
-<li><a href="http://www.cyberhades.com/2012/09/03/los-proyectos-mas-duplicados-github-infografia/">CyberHader</a></li>
-<li><a href="https://github.com/popular/forked">Github</a></li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[JavaScript blocks rendering]]></title>
-    <link href="http://botti.co/blog/perfomance/"/>
+    <link href="http://Bottico.github.com/blog/perfomance/"/>
     <updated>2012-08-30T13:41:00-05:00</updated>
-    <id>http://botti.co/blog/perfomance</id>
+    <id>http://Bottico.github.com/blog/perfomance</id>
     <content type="html"><![CDATA[<p>Hace ya tiempo en el primer meetup de <a href="http://www.bogodev.org/">Bogodev</a>, <a href="http://twitter.com/torrenegra">@torrenegra</a> hablo sobre tendencias en nueva york, y como la <strong>velocidad</strong> de carga de una pagina hablaba bien de ella.</p>
 
 <p>La idea de hoy es compartir una pequeña guia de como dar solucion a un problema frecuente a la hora de cargar archivos js :D</p>
@@ -556,9 +857,9 @@ sean cargado de ultimos y nuestra plantilla sea renderizado en un mejor tiempo.<
   
   <entry>
     <title type="html"><![CDATA[CSS para Placeholder]]></title>
-    <link href="http://botti.co/blog/css-para-placeholder/"/>
+    <link href="http://Bottico.github.com/blog/css-para-placeholder/"/>
     <updated>2012-08-30T01:55:00-05:00</updated>
-    <id>http://botti.co/blog/css-para-placeholder</id>
+    <id>http://Bottico.github.com/blog/css-para-placeholder</id>
     <content type="html"><![CDATA[<p>Elaborando un campo de búsqueda me tope con un problemita, el cual era definirle estilos a <strong>placeholder</strong>, y la solución para esto es bastante simple. basta simplemente con:</p>
 
 <figure class='code'><figcaption><span>Estilos para placeholder</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -629,9 +930,9 @@ sean cargado de ultimos y nuestra plantilla sea renderizado en un mejor tiempo.<
   
   <entry>
     <title type="html"><![CDATA[Hola mundo]]></title>
-    <link href="http://botti.co/blog/HolaMundo/"/>
+    <link href="http://Bottico.github.com/blog/HolaMundo/"/>
     <updated>2012-08-27T17:16:00-05:00</updated>
-    <id>http://botti.co/blog/HolaMundo</id>
+    <id>http://Bottico.github.com/blog/HolaMundo</id>
     <content type="html"><![CDATA[<p>Hace varios años ya, cree mi primer Blog llamado <strong>El blog de legna</strong> Un blog personal, que practicamente era un copy paste de otros blogs, desarrollado en <strong>cute news</strong> y a punta de tablas xD, que por motivos personales no pude continuar.</p>
 
 <figure class='code'><figcaption><span>El que entendio entendio</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>

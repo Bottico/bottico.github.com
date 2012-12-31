@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: sinatra | Bottico]]></title>
-  <link href="http://botti.co/blog/categories/sinatra/atom.xml" rel="self"/>
-  <link href="http://botti.co/"/>
-  <updated>2012-12-31T00:45:01-05:00</updated>
-  <id>http://botti.co/</id>
+  <link href="http://Bottico.github.com/blog/categories/sinatra/atom.xml" rel="self"/>
+  <link href="http://Bottico.github.com/"/>
+  <updated>2012-12-31T02:56:23-05:00</updated>
+  <id>http://Bottico.github.com/</id>
   <author>
     <name><![CDATA[Angel Celis Botto]]></name>
     <email><![CDATA[angelbotto@gmail.com]]></email>
@@ -14,10 +14,122 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Amazon S3 y Sinatra]]></title>
+    <link href="http://Bottico.github.com/blog/amazon-s3-y-sinatra/"/>
+    <updated>2012-12-31T01:25:00-05:00</updated>
+    <id>http://Bottico.github.com/blog/amazon-s3-y-sinatra</id>
+    <content type="html"><![CDATA[<p><img class="center" src="http://www.oxalto.co.uk/wp-content/uploads/2012/12/amazon.png">
+Amazon tiene tantas herramientas que en mi día a día desarrollando se vuelven indispensables, en especial S3 (Amazon Simple Storage Service)</p>
+
+<p><blockquote><p>Amazon S3 es almacenamiento para Internet. Está diseñado para facilitar a los desarrolladores la informática a escala web.</p><footer><strong>Amazon</strong> <cite><a href='http://aws.amazon.com/es/s3/'>Amazon Simple Storage Service</a></cite></footer></blockquote></p>
+
+<p>La idea de este articulo es integrar Sintra con esta plataforma, lo cual se logra de la siguiente manera.</p>
+
+<!--more-->
+
+
+<h2>aws-s3 Gem</h2>
+
+<p>Ruby cuenta con una gran variedad de gemas que permiten conectarnos con el API de Amazon de una manera muy sencilla, para su uso unicamente hace falta agregar a nuestro gemfile la siguiente linea.</p>
+
+<p><code>ruby Gemfile
+gem 'aws-s3', :require =&gt; 'aws/s3'
+</code></p>
+
+<p>y a nuestro archivode la clase principal en sinatra (en mi caso app.rb)</p>
+
+<p><code>ruby app.rb
+require 'aws/s3'
+</code></p>
+
+<h2>Conectandonos</h2>
+
+<p>ya tenemos nuestra gema y hacemos uso de ella en nuestro proyecto, ahora ebemos conectarnos, necesitaremos tener las credenciales de acceso que podemos obtener <a href="https://portal.aws.amazon.com/gp/aws/securityCredentials">Aqui :)</a>, lo siguiente sera usar esas llaves y crear un metodo que nos conecte cuando lo necesitemos algo asi :)</p>
+
+<p>```ruby helper.rb
+include AWS::S3</p>
+
+<p>def amazon_s3_connect</p>
+
+<pre><code>Base.establish_connection!(
+    :access_key_id =&gt; "clave de acceso aqui",
+    :secret_access_key =&gt; "clave de acceso secreto aqui"
+)
+</code></pre>
+
+<p>end
+```</p>
+
+<h3>Subiendo archivos</h3>
+
+<p>Ya conectados podemos hacer "maravillas" literalmente xD, antes seria bueno que conocieras un poco sobre los <a href="http://notepad.cc/tuwedu41">buckets</a>, ahora subiremos un archivo basado en un formulario html que envia por post nuestro archivo al cual posteriormente lo subiremos :). algo asi:</p>
+
+<p>``` html form.erb</p>
+
+<p><form action="/upload" method="post" class="form-horizontal" enctype="multipart/form-data"></p>
+
+<pre><code>&lt;input type="file" name="photo" &gt;
+</code></pre>
+
+<p></form>
+```</p>
+
+<p>``` ruby app.rb
+class App &lt; Sinatra::Base</p>
+
+<pre><code>helpers Sinatra::HelperBottico
+
+get '/upload' do 
+    erb :form
+end
+
+post '/upload' do 
+
+    unless params[:photo] &amp;&amp; (tmpfile = params[:photo][:tempfile]) &amp;&amp; (name = params[:photo][:filename])
+        redirect '/error'
+    end                     
+
+    while blk = tmpfile.read(65536)
+        amazon_s3_connect
+        AWS::S3::S3Object.store(name, open(tmpfile),"NOMBRE BUCKET",:access =&gt; :public_read)
+    end
+
+    ":D listo calisto"
+end
+</code></pre>
+
+<p>end
+```</p>
+
+<p>En nuestra ruta <code>post '/upload'</code> lo que hacemos es indicar que en dado caso que no se envie ninguna foto redireccione a una pagina de error ( o haga lo que desees ) y creamos 2 variables las cuales son tmpfile que almacena nuestro archivo y name que le asigna un nombre ( puede ser el mismo de la imagen o uno que nosotros especifiquemos ). luego simplemente subimos nuestro archivo al bucket que le indiquemos y le damos acceso publico.</p>
+
+<h3>Eliminando archivos</h3>
+
+<p>Por cuestion de buenas practicas, ahorrar espacio o se te dio la gana xD deseas eliminar un archivo debes hacer lo siguiente.</p>
+
+<p><code>ruby buscar.rb
+amazon_s3_connect
+file = AWS::S3::S3Object.find "NOMBRE ARCHIVO QUE BUSCO", "MI BUCKET"
+file.delete
+</code></p>
+
+<p>lo primero que se hace es buscar el archivo por su nombre en el bucket que deseemos y posteriormente lo eliminamos :)</p>
+
+<h3>Conclusion</h3>
+
+<p>Como ven es bastante simple el manejo de AWS-S3 en ruby simplemente es darle rienda suelta a nuestra imaginacion y usar este servicio para almacenar cuanto se nos ocurra :).</p>
+
+<p>por cierto una buena practica con <a href="http://heroku.com">Heroku</a> es la creacion de variables de configuracion para no escribir nunca en nuestro codigo estos valioso datos.</p>
+
+<p>espero les guste la guia :)</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Parsear JSON en Sinatra]]></title>
-    <link href="http://botti.co/blog/parsear-json-con-sinatra/"/>
+    <link href="http://Bottico.github.com/blog/parsear-json-con-sinatra/"/>
     <updated>2012-10-08T01:51:00-05:00</updated>
-    <id>http://botti.co/blog/parsear-json-con-sinatra</id>
+    <id>http://Bottico.github.com/blog/parsear-json-con-sinatra</id>
     <content type="html"><![CDATA[<h3>El problema</h3>
 
 <p>Muchas veces consumimos datos de otras aplicaciones o otras herramientas ya sea para alimentar nuestro propio servicios o integrando nuestra App con alguna API.</p>
@@ -100,9 +212,9 @@ require 'HTTParty'</p>
   
   <entry>
     <title type="html"><![CDATA[Redirección 301, Paginas sin WWW - Sinatra]]></title>
-    <link href="http://botti.co/blog/redireccion-301/"/>
+    <link href="http://Bottico.github.com/blog/redireccion-301/"/>
     <updated>2012-09-18T04:26:00-05:00</updated>
-    <id>http://botti.co/blog/redireccion-301</id>
+    <id>http://Bottico.github.com/blog/redireccion-301</id>
     <content type="html"><![CDATA[<p>Segun tengo entendido, tener accesso habilitado mediante www o sin ella, afecta el posicionamiento de esta en los buscadores (Mal SEO), ya que lo detecta como contenido duplicado.</p>
 
 <p>Cree un snippet que depronto les puede ser util, para redireccionar de midominio.com a www.midominio.com.</p>
@@ -124,9 +236,9 @@ before do</p>
   
   <entry>
     <title type="html"><![CDATA[Jugando con Sinatra]]></title>
-    <link href="http://botti.co/blog/conociendo-sinatra/"/>
+    <link href="http://Bottico.github.com/blog/conociendo-sinatra/"/>
     <updated>2012-09-17T16:33:00-05:00</updated>
-    <id>http://botti.co/blog/conociendo-sinatra</id>
+    <id>http://Bottico.github.com/blog/conociendo-sinatra</id>
     <content type="html"><![CDATA[<h2>Sinatra</h2>
 
 <p><a href="http://sinatrarb.com">Sinatra</a> es un framework <strong>(DSL)</strong> de desarrollo para aplicaciones web escrito en <strong>Ruby</strong>. que usa <strong>Rack</strong> para envolver o resolver peticiones HTTP <strong>middleware</strong>.</p>
@@ -218,9 +330,9 @@ before do</p>
   
   <entry>
     <title type="html"><![CDATA[Balotimetro]]></title>
-    <link href="http://botti.co/blog/balotimetro/"/>
+    <link href="http://Bottico.github.com/blog/balotimetro/"/>
     <updated>2012-09-17T16:04:00-05:00</updated>
-    <id>http://botti.co/blog/balotimetro</id>
+    <id>http://Bottico.github.com/blog/balotimetro</id>
     <content type="html"><![CDATA[<p><img class="center" src="http://gallery.mailchimp.com/789b1037d0cbbb5eeabfecd29/images/header2.png">
 Estuve unos días alejado del blog, la razón se debe a que me propuse aprender algo nuevo y realizar un pequeño proyecto basado en este nuevo aprendizaje.</p>
 

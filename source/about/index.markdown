@@ -4,7 +4,7 @@ title: "Sobre mi"
 comments: true
 sharing: true
 footer: true
-sidebar: true
+sidebar: false
 ---
 
 Soy la persona menos poetica que vas a conocer en tu vida. En cualquier dia en comun me puedes ver con uno de mis amigos conversando de basura que no tiene nada que ver con la filosofia. Veras a un hombre delgado y alto, un poco torpe al caminar. Pero no podras comprenderme solo mirando afuera. Tendrias que ver mas alla de el hombre con la camisa V poco cuidado, te tendrias que dar a la tarea de observar pero con el alma. Pero como eso nunca lo podras hacer, invítame un cafe :)
