@@ -34,7 +34,11 @@ module Jekyll
     def render(context)
       output = super
       if @video
+<<<<<<< HEAD
         video =  "<video class='sublime' width='#{@width}' height='#{@height}' preload='none' controls poster='#{@poster}'>"
+=======
+        video =  "<video width='#{@width}' height='#{@height}' preload='none' controls poster='#{@poster}'>"
+>>>>>>> 2b67270f960563c55dd6c66495517bccc4f7fb17
         video += "<source src='#{@video}' type='video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"'/></video>"
       else
         "Error processing input, expected syntax: {% video url/to/video [width height] [url/to/poster] %}"

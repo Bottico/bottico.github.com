@@ -7,11 +7,19 @@ require "stringex"
 ssh_user       = "user@domain.com"
 ssh_port       = "22"
 document_root  = "~/website.com/"
+<<<<<<< HEAD
 rsync_delete   = true
 deploy_default = "push"
 
 # This will be configured for you when you run config_deploy
 deploy_branch  = "master"
+=======
+rsync_delete   = false
+deploy_default = "rsync"
+
+# This will be configured for you when you run config_deploy
+deploy_branch  = "gh-pages"
+>>>>>>> 2b67270f960563c55dd6c66495517bccc4f7fb17
 
 ## -- Misc Configs -- ##
 
@@ -43,6 +51,7 @@ task :install, :theme do |t, args|
   mkdir_p public_dir
 end
 
+<<<<<<< HEAD
 desc "Check all external links"
 task :check_links do
   
@@ -52,6 +61,8 @@ task :check_links do
   ).check_uris
 end
 
+=======
+>>>>>>> 2b67270f960563c55dd6c66495517bccc4f7fb17
 #######################
 # Working with Jekyll #
 #######################
