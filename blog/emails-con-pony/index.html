@@ -1,0 +1,490 @@
+
+<!--
+##    ## ########  ########    ###    ######## ######## #### ######## ##      ## ######## 
+##   ##  ##     ## ##         ## ##      ##       ##     ##  ##       ##  ##  ## ##       
+##  ##   ##     ## ##        ##   ##     ##       ##     ##  ##       ##  ##  ## ##       
+#####    ########  ######   ##     ##    ##       ##     ##  ######   ##  ##  ## ######   
+##  ##   ##   ##   ##       #########    ##       ##     ##  ##       ##  ##  ## ##       
+##   ##  ##    ##  ##       ##     ##    ##       ##     ##  ##       ##  ##  ## ##       
+##    ## ##     ## ######## ##     ##    ##       ##    #### ########  ###  ###  ######## 
+-------------------------------------------------------------------------------------------
+  Diseño y desarrollo por
+  Angel Celis Botto   | @bottico
+-->
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Emails con pony - Bottico</title>
+  <meta name="author" content="Angel Celis Botto">
+  
+  <meta name="description" content="Emails Con Pony Dec 31st, 2012 | Comentarios Pony es una gema que me encanta, facilita de manera increible enviars emails con ruby. Pony, the &hellip;">
+  
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="google-site-verification" content="aWsVi9MPQPfLZUKYOLIdnlVX9kMAnow13p6KpgktOqs" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="cache-control" content="no-cache">
+  
+  <link rel="canonical" href="http://Bottico.github.com/blog/emails-con-pony/">
+  <link href="/favicon.ico" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="http://feeds.feedburner.com/Bottico" rel="alternate" title="Bottico" type="application/atom+xml">
+  
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Bottico</a></h1>
+  
+    <h2>Una vida de desarrollando</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://feeds.feedburner.com/Bottico" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:Bottico.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Buscar"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+ <li><a href="/">Inicio</a></li>
+ <li><a href="/about">Sobre mi</a></li>
+ <li><a href="/projects">Proyectos</a></li>
+ <li><a href="/labs">Laboratorios</a></li>
+  <li><a href="/blog/archives">Archivo</a></li>
+</ul>
+
+</nav>
+  
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+  
+  <header>
+    
+      <h1 class="entry-title" itemprop="name">Emails Con Pony</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-31T02:25:00-05:00" pubdate data-updated="true" itempropr="datePublished">Dec 31<span>st</span>, 2012</time>
+        
+         | <a href="#disqus_thread">Comentarios</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content" itemprop="articleBody"><p><img class="center" src="http://fc02.deviantart.net/fs71/f/2011/164/f/8/google_chrome_icon_by_kitsuneymg-d3ita1w.png"></p>
+
+<p>Pony es una gema que me encanta, facilita de manera increible enviars emails con ruby.</p>
+
+<blockquote><p>Pony, the express way to send email in Ruby</p></blockquote>
+
+
+<h3>Pony gem</h3>
+
+<p>Para el uso de pony debemos agregar a nuestro gemfile lo siguiente</p>
+
+<figure class='code'><figcaption><span>Gemfile</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s2">&quot;pony&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>y a nuestro app.rb</p>
+
+<figure class='code'><figcaption><span>app.rb</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;pony&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<h3>Enviando emails</h3>
+
+<p>enviar emails es igual de facil simplemente hace basta lo siguiente</p>
+
+<figure class='code'><figcaption><span>app.rb </span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Pony</span><span class="o">.</span><span class="n">mail</span><span class="p">(</span>
+</span><span class='line'>  <span class="ss">:to</span> <span class="o">=&gt;</span> <span class="s1">&#39;tu@ejemplo.com&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:from</span> <span class="o">=&gt;</span> <span class="s1">&#39;yo@ejemplo.com&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:subject</span> <span class="o">=&gt;</span> <span class="s1">&#39;Hoooola&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:body</span> <span class="o">=&gt;</span> <span class="s1">&#39;faciiil verdad&#39;</span>
+</span><span class='line'><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<p>bastante facil verdad? quieres mas?</p>
+
+<!--more-->
+
+
+<p>Pony nos da una gran varidad de opciones las cuales son:</p>
+
+<ul>
+<li><strong>to</strong> Quien recibe el email</li>
+<li><strong>cc</strong> Otras personas que reciben una copia exacta del email</li>
+<li><strong>bcc</strong> Otras personas que reciben una copia exacta del email de manera oculta</li>
+<li><strong>from</strong> Quien envia el email</li>
+<li><strong>body</strong> Contenido del mensaje ( texto plano )</li>
+<li><strong>html_body</strong> Contenido del email en html</li>
+<li><strong>subject</strong> No debo explicarlo verdad?</li>
+<li><strong>charset</strong> En caso de que la codificación sea diferente a utf-8</li>
+<li><strong>attachments</strong> Archivos adjuntados</li>
+<li><strong>headers</strong> Cabezeras personalizadas</li>
+</ul>
+
+
+<p>Ejemplo:</p>
+
+<figure class='code'><figcaption><span>app.rb </span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Pony</span><span class="o">.</span><span class="n">mail</span><span class="p">(</span>
+</span><span class='line'>  <span class="ss">:to</span> <span class="o">=&gt;</span> <span class="s1">&#39;tu@ejemplo.com&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:bcc</span> <span class="o">=&gt;</span> <span class="s1">&#39;oculto@ejemplo.com&#39;</span>
+</span><span class='line'>  <span class="ss">:from</span> <span class="o">=&gt;</span> <span class="s1">&#39;yo@ejemplo.com&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:subject</span> <span class="o">=&gt;</span> <span class="s1">&#39;Hoooola&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:html_body</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="n">erb</span> <span class="ss">:email</span><span class="p">,</span> <span class="ss">:layout</span> <span class="o">=&gt;</span> <span class="kp">false</span><span class="p">)</span>
+</span><span class='line'><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<p>Enviando emails con gmail y pony :)</p>
+
+<figure class='code'><figcaption><span>app.rb </span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Pony</span><span class="o">.</span><span class="n">mail</span><span class="p">(</span>
+</span><span class='line'>  <span class="ss">:to</span> <span class="o">=&gt;</span> <span class="s1">&#39;tu@ejemplo.com&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:from</span> <span class="o">=&gt;</span> <span class="s1">&#39;yo@ejemplo.com&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:subject</span> <span class="o">=&gt;</span> <span class="s1">&#39;Hoooola&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:html_body</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="n">erb</span> <span class="ss">:email</span><span class="p">,</span> <span class="ss">:layout</span> <span class="o">=&gt;</span> <span class="kp">false</span><span class="p">),</span>
+</span><span class='line'>  <span class="ss">:via</span> <span class="o">=&gt;</span> <span class="ss">:smtp</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:via_options</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>    <span class="ss">:address</span>              <span class="o">=&gt;</span> <span class="s1">&#39;smtp.gmail.com&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="ss">:port</span>                 <span class="o">=&gt;</span> <span class="s1">&#39;587&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="ss">:enable_starttls_auto</span> <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">,</span>
+</span><span class='line'>    <span class="ss">:user_name</span>            <span class="o">=&gt;</span> <span class="s1">&#39;angelbotto@gmail.com&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="ss">:password</span>             <span class="o">=&gt;</span> <span class="s1">&#39;estenoesmipasswordnilointentes&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="ss">:authentication</span>       <span class="o">=&gt;</span> <span class="ss">:plain</span><span class="p">,</span> <span class="c1"># :plain, :login, :cram_md5, no auth by default</span>
+</span><span class='line'>    <span class="ss">:domain</span>               <span class="o">=&gt;</span> <span class="s2">&quot;localhost.localdomain&quot;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<p>Enviando emails con sendgrid (heroku) y pony</p>
+
+<figure class='code'><figcaption><span>app.rb </span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Pony</span><span class="o">.</span><span class="n">mail</span><span class="p">(</span>
+</span><span class='line'>  <span class="ss">:to</span> <span class="o">=&gt;</span> <span class="s1">&#39;tu@ejemplo.com&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:from</span> <span class="o">=&gt;</span> <span class="s1">&#39;yo@ejemplo.com&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:subject</span> <span class="o">=&gt;</span> <span class="s1">&#39;Hoooola&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:html_body</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="n">erb</span> <span class="ss">:email</span><span class="p">,</span> <span class="ss">:layout</span> <span class="o">=&gt;</span> <span class="kp">false</span><span class="p">),</span>
+</span><span class='line'>  <span class="ss">:via</span> <span class="o">=&gt;</span> <span class="ss">:smtp</span><span class="p">,</span>
+</span><span class='line'>  <span class="ss">:via_options</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>    <span class="ss">:address</span> <span class="o">=&gt;</span> <span class="s1">&#39;smtp.sendgrid.net&#39;</span><span class="p">,</span>
+</span><span class='line'>      <span class="ss">:port</span> <span class="o">=&gt;</span> <span class="s1">&#39;587&#39;</span><span class="p">,</span>
+</span><span class='line'>      <span class="ss">:domain</span> <span class="o">=&gt;</span> <span class="s1">&#39;heroku.com&#39;</span><span class="p">,</span>
+</span><span class='line'>      <span class="ss">:user_name</span> <span class="o">=&gt;</span> <span class="no">ENV</span><span class="o">[</span><span class="s1">&#39;SENDGRID_USERNAME&#39;</span><span class="o">]</span><span class="p">,</span>
+</span><span class='line'>      <span class="ss">:password</span> <span class="o">=&gt;</span> <span class="no">ENV</span><span class="o">[</span><span class="s1">&#39;SENDGRID_PASSWORD&#39;</span><span class="o">]</span><span class="p">,</span>
+</span><span class='line'>      <span class="ss">:authentication</span> <span class="o">=&gt;</span> <span class="ss">:plain</span><span class="p">,</span>
+</span><span class='line'>      <span class="ss">:enable_starttls_auto</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<p>facil facil facil :) a enviar emails :)</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Escrito por <span class="fn" itemprop="author">Angel Celis Botto</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-31T02:25:00-05:00" pubdate data-updated="true" itempropr="datePublished">Dec 31<span>st</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/webdevelopment/'>webdevelopment</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://Bottico.github.com/blog/emails-con-pony/" data-via="bottico" data-counturl="http://Bottico.github.com/blog/emails-con-pony/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/amazon-s3-y-sinatra/" title="Previous Post: Amazon S3 y Sinatra">&laquo; Amazon S3 y Sinatra</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/Un-poco-de-vida-a-los-logs-de-git/" title="Next Post: Un poco de vida a los log's de git">Un poco de vida a los log's de git &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comentarios</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Articulos recientes</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+       <time>  31 Jul</time> <a href="/blog/unicorn-en-heroku/">Unicorn en Heroku</a>
+      </li>
+    
+      <li class="post">
+       <time>  31 Jul</time> <a href="/blog/Un-poco-de-vida-a-los-logs-de-git/">Un poco de vida a los log's de git</a>
+      </li>
+    
+      <li class="post">
+       <time>  31 Dec</time> <a href="/blog/emails-con-pony/">Emails con pony</a>
+      </li>
+    
+      <li class="post">
+       <time>  31 Dec</time> <a href="/blog/amazon-s3-y-sinatra/">Amazon S3 y Sinatra</a>
+      </li>
+    
+      <li class="post">
+       <time>  16 Oct</time> <a href="/blog/yeoman-init/">Yeoman init</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Categorias</h1>
+    <ul id='categories'><li><em>6</em><a href="/blog/categories/ruby">ruby</a><span style="width:42%">bar</span><div class="ruby"></div></li><li><em>5</em><a href="/blog/categories/sinatra">sinatra</a><span style="width:35%">bar</span><div class="sinatra"></div></li><li><em>3</em><a href="/blog/categories/webdevelopment">webdevelopment</a><span style="width:21%">bar</span><div class="webdevelopment"></div></li><li><em>3</em><a href="/blog/categories/personal">personal</a><span style="width:21%">bar</span><div class="personal"></div></li><li><em>1</em><a href="/blog/categories/javascript">javascript</a><span style="width:7%">bar</span><div class="javascript"></div></li><li><em>1</em><a href="/blog/categories/perfomance">perfomance</a><span style="width:7%">bar</span><div class="perfomance"></div></li><li><em>1</em><a href="/blog/categories/stylesheets">stylesheets</a><span style="width:7%">bar</span><div class="stylesheets"></div></li><li><em>1</em><a href="/blog/categories/ideas">ideas</a><span style="width:7%">bar</span><div class="ideas"></div></li></ul>
+</section>
+
+<section>
+  <h1>Ultimos Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status actualizando...</li>
+  </ul>
+  
+  
+    <a href="http://twitter.com/bottico" class="twitter-follow-button" data-show-count="true">Sigueme @bottico</a>
+  
+</section>
+
+
+<section class="googleplus googleplus-hidden">
+  <h1>
+    <a href="https://plus.google.com/100537306662051964513?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo">
+
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'blogbottico';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://Bottico.github.com/blog/emails-con-pony/';
+        var disqus_url = 'http://Bottico.github.com/blog/emails-con-pony/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+  
+
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("bottico", 5, true);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-30981360-1']);
+    _gaq.push(['_setDomain', 'botti.co']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+  <script type="text/javascript">(function(c,a){window.mixpanel=a;var b,d,h,e;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src=("https:"===c.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.1.min.js';d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d);a._i=[];a.init=function(b,c,f){function d(a,b){var c=b.split(".");2==c.length&&(a=a[c[0]],b=c[1]);a[b]=function(){a.push([b].concat(Array.prototype.slice.call(arguments,0)))}}var g=a;"undefined"!==typeof f?
+g=a[f]=[]:f="mixpanel";g.people=g.people||[];h="disable track track_pageview track_links track_forms register register_once unregister identify name_tag set_config people.identify people.set people.increment".split(" ");for(e=0;e<h.length;e++)d(g,h[e]);a._i.push([b,c,f])};a.__SV=1.1})(document,window.mixpanel||[]);
+mixpanel.init("1353d6911498473965267e60ac992d72");</script>
+<script type="text/javascript" src="/javascripts/botti.co.js"></script>
+
+</body>
+</html>
