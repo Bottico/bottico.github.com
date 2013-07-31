@@ -20,7 +20,7 @@
   <title>Bottico</title>
   <meta name="author" content="Angel Celis Botto">
   
-  <meta name="description" content="Emails Con Pony Dec 31st, 2012 | Comentarios Pony es una gema que me encanta, facilita de manera increible enviars emails con ruby. Pony, the &hellip;">
+  <meta name="description" content="Un Poco De Vida a Los Log&#8217;s De Git Jul 31st, 2013 | Comentarios Todo programador que se respete, tiene mas organizado su workspace que su &hellip;">
   
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
@@ -74,6 +74,72 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title" itemprop="name"><a href="/blog/Un-poco-de-vida-a-los-logs-de-git/" itemprop="url">Un Poco De Vida a Los Log&#8217;s De Git</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-31T05:42:00-05:00" pubdate data-updated="true" itempropr="datePublished">Jul 31<span>st</span>, 2013</time>
+        
+         | <a href="/blog/Un-poco-de-vida-a-los-logs-de-git/#disqus_thread">Comentarios</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content" itemprop="articleBody"><p><img class="center" src="https://dl.dropboxusercontent.com/u/27031193/blog/images/gitlog.jpg"></p>
+
+<p>Todo programador que se respete, tiene mas organizado su workspace que su espacio de trabajo fisico xD, es agotador ver los log&#8217;s de git tan secos y aburridos, por eso vamos a darle un poco de vida con el siguiente truquito :)</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git log --graph --pretty<span class="o">=</span>format:<span class="s1">&#39;%C(bold blue)%h %Cgreen(%cr)%Creset -%C(yellow)%d%Creset %s %C(yellow)&lt;%an&gt;%Creset&#39;</span> --abbrev-commit
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>..epa epa, antes de los reclamos de &#8220;que comando tan largo&#8221;, vamos a crear un alias.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git config --global alias.lg <span class="s2">&quot;log --color --graph --pretty=format:&#39;%C(bold blue)%h %Cgreen(%cr)%Creset -%C(yellow)%d%Creset %s %C(yellow)&lt;%an&gt;%Creset&#39; --abbrev-commit&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ya esta, ahora basta con escribir.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git lg
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>o si prefieren, ver las lineas que cambiaron</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git lg -p
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -555,57 +621,6 @@ Estuve unos días alejado del blog, la razón se debe a que me propuse aprender 
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title" itemprop="name"><a href="/blog/perfomance/" itemprop="url">JavaScript Blocks Rendering</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-30T13:41:00-05:00" pubdate data-updated="true" itempropr="datePublished">Aug 30<span>th</span>, 2012</time>
-        
-         | <a href="/blog/perfomance/#disqus_thread">Comentarios</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content" itemprop="articleBody"><p>Hace ya tiempo en el primer meetup de <a href="http://www.bogodev.org/">Bogodev</a>, <a href="http://twitter.com/torrenegra">@torrenegra</a> hablo sobre tendencias en nueva york, y como la <strong>velocidad</strong> de carga de una pagina hablaba bien de ella.</p>
-
-<p>La idea de hoy es compartir una pequeña guia de como dar solucion a un problema frecuente a la hora de cargar archivos js :D</p>
-
-<h2>El problema</h2>
-
-<p><img class="center" src="http://dl.dropbox.com/u/27031193/botti.co/captura.png" title="perfomance" ></p>
-
-<p>Usualmente se acostumbra a cargar los archivos JavaScript <code>&lt;script&gt;</code> en las cabezeras del documento, <code>&lt;head&gt;</code>esto en cierto sentido no es malo, más sin embargo puede causar un problema a la hora de renderizar nuestra plantilla.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/perfomance/" itemprop="url">Continar leyendo &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -619,6 +634,10 @@ Estuve unos días alejado del blog, la razón se debe a que me propuse aprender 
     <section>
   <h1>Articulos recientes</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+       <time>  31 Jul</time> <a href="/blog/Un-poco-de-vida-a-los-logs-de-git/">Un poco de vida a los log&#8217;s de git</a>
+      </li>
     
       <li class="post">
        <time>  31 Dec</time> <a href="/blog/emails-con-pony/">Emails con pony</a>
@@ -636,15 +655,11 @@ Estuve unos días alejado del blog, la razón se debe a que me propuse aprender 
        <time>  08 Oct</time> <a href="/blog/ganamos-rhok-hac2012-hackers-contra-la-corrupcion/">Ganamos RHOK - HAC2012 - Hackers contra la corrupcion</a>
       </li>
     
-      <li class="post">
-       <time>  08 Oct</time> <a href="/blog/lanzar-sublime-text-2-desde-la-terminal-en-mac-os-x/">Lanzar Sublime Text 2 desde la terminal en Mac OS X</a>
-      </li>
-    
   </ul>
 </section>
 <section>
   <h1>Categorias</h1>
-    <ul id='categories'><li><em>6</em><a href="/blog/categories/ruby">ruby</a><span style="width:50%">bar</span><div class="ruby"></div></li><li><em>5</em><a href="/blog/categories/sinatra">sinatra</a><span style="width:41%">bar</span><div class="sinatra"></div></li><li><em>3</em><a href="/blog/categories/webdevelopment">webdevelopment</a><span style="width:25%">bar</span><div class="webdevelopment"></div></li><li><em>3</em><a href="/blog/categories/personal">personal</a><span style="width:25%">bar</span><div class="personal"></div></li><li><em>1</em><a href="/blog/categories/javascript">javascript</a><span style="width:8%">bar</span><div class="javascript"></div></li><li><em>1</em><a href="/blog/categories/perfomance">perfomance</a><span style="width:8%">bar</span><div class="perfomance"></div></li><li><em>1</em><a href="/blog/categories/stylesheets">stylesheets</a><span style="width:8%">bar</span><div class="stylesheets"></div></li><li><em>1</em><a href="/blog/categories/ideas">ideas</a><span style="width:8%">bar</span><div class="ideas"></div></li></ul>
+    <ul id='categories'><li><em>6</em><a href="/blog/categories/ruby">ruby</a><span style="width:46%">bar</span><div class="ruby"></div></li><li><em>5</em><a href="/blog/categories/sinatra">sinatra</a><span style="width:38%">bar</span><div class="sinatra"></div></li><li><em>3</em><a href="/blog/categories/webdevelopment">webdevelopment</a><span style="width:23%">bar</span><div class="webdevelopment"></div></li><li><em>3</em><a href="/blog/categories/personal">personal</a><span style="width:23%">bar</span><div class="personal"></div></li><li><em>1</em><a href="/blog/categories/javascript">javascript</a><span style="width:7%">bar</span><div class="javascript"></div></li><li><em>1</em><a href="/blog/categories/perfomance">perfomance</a><span style="width:7%">bar</span><div class="perfomance"></div></li><li><em>1</em><a href="/blog/categories/stylesheets">stylesheets</a><span style="width:7%">bar</span><div class="stylesheets"></div></li><li><em>1</em><a href="/blog/categories/ideas">ideas</a><span style="width:7%">bar</span><div class="ideas"></div></li></ul>
 </section>
 
 <section>

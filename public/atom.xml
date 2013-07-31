@@ -4,7 +4,7 @@
   <title><![CDATA[Bottico]]></title>
   <link href="http://Bottico.github.com/atom.xml" rel="self"/>
   <link href="http://Bottico.github.com/"/>
-  <updated>2012-12-31T02:56:23-05:00</updated>
+  <updated>2013-07-31T06:08:42-05:00</updated>
   <id>http://Bottico.github.com/</id>
   <author>
     <name><![CDATA[Angel Celis Botto]]></name>
@@ -12,6 +12,43 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Un poco de vida a los log's de git]]></title>
+    <link href="http://Bottico.github.com/blog/Un-poco-de-vida-a-los-logs-de-git/"/>
+    <updated>2013-07-31T05:42:00-05:00</updated>
+    <id>http://Bottico.github.com/blog/Un-poco-de-vida-a-los-logs-de-git</id>
+    <content type="html"><![CDATA[<p><img class="center" src="https://dl.dropboxusercontent.com/u/27031193/blog/images/gitlog.jpg"></p>
+
+<p>Todo programador que se respete, tiene mas organizado su workspace que su espacio de trabajo fisico xD, es agotador ver los log&#8217;s de git tan secos y aburridos, por eso vamos a darle un poco de vida con el siguiente truquito :)</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git log --graph --pretty<span class="o">=</span>format:<span class="s1">&#39;%C(bold blue)%h %Cgreen(%cr)%Creset -%C(yellow)%d%Creset %s %C(yellow)&lt;%an&gt;%Creset&#39;</span> --abbrev-commit
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>..epa epa, antes de los reclamos de &#8220;que comando tan largo&#8221;, vamos a crear un alias.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git config --global alias.lg <span class="s2">&quot;log --color --graph --pretty=format:&#39;%C(bold blue)%h %Cgreen(%cr)%Creset -%C(yellow)%d%Creset %s %C(yellow)&lt;%an&gt;%Creset&#39; --abbrev-commit&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ya esta, ahora basta con escribir.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git lg
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>o si prefieren, ver las lineas que cambiaron</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git lg -p
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Emails con pony]]></title>
