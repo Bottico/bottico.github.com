@@ -8,3 +8,15 @@
 @import "base";
 @import "partials";
 @import "custom/styles";
+
+
+#content {
+	article {
+		img {
+			&.center {
+				min-width: 90% !important;
+				padding:0px !important;
+			}
+		}
+	}
+}
